@@ -1,0 +1,135 @@
+name: Run Python unit tests using Poetry, with a Postgres backend
+# This utilizing an architecture where the postgres service is running in a container
+# and the jobs are running in the "runner machine" directly (requiring explicit networking connections
+# to get to the running postgres service). Refer to:
+# https://docs.github.com/en/actions/using-containerized-services/creating-postgresql-service-containers#running-jobs-directly-on-the-runner-machine
+
+on:
+  workflow_call:
+    inputs:
+      setup-script:
+        description: 'A Bash script in the tests directory of the Python repo that handles any setup needed for testing'
+        required: false
+        default: 'tests/ci_setup.sh'
+        type: string
+      test-script:
+        description: 'A Bash script in the tests directory of the Python repo that handles running tests'
+        required: false
+        default: 'tests/ci_commands_script.sh'
+        type: string
+      python-version:
+        description: 'The Python version to use and defaults to latest'
+        required: false
+        default: '3.9'
+        type: string
+      run-coveralls:
+        required: false
+        default: false
+        type: boolean
+      use-cache:
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    # Defining a Postgres DB service, for tests that use it
+    services:
+      postgres:
+        # Docker Hub image
+        image: postgres:13
+        env:
+          # trust connections from other jobs in this workflow to access this service
+          # this simplifies the networking to this service 
+          POSTGRES_HOST_AUTH_METHOD: trust
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
+    steps:
+      - name: Additional Postgres service configuration
+        # PostgreSQL 15 will revoke the CREATE permission from all users 
+        # except a database owner from the public (or default) schema.
+        # This is required by some services for db setup for testing, so grant
+        # that permission to the postgres user now to hopefully avoid headache
+        # when we eventually upgrade to 15 (even though it's not technically required
+        # in postgres 13).
+        run: |
+          echo "Versions"
+          psql --version
+          psql -U postgres -h localhost -d postgres -c 'SELECT version();'
+          
+          echo "Grant admin privileges to postgres user"
+          psql -U postgres -h localhost -d postgres -c 'GRANT CREATE ON SCHEMA public TO postgres;'
+        env:
+            # The hostname used to communicate with the PostgreSQL service container
+            POSTGRES_HOST: localhost
+            POSTGRES_PORT: 5432
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      # cache the dependencies based on a hash of the lock file
+      - name: Poetry cache
+        if: inputs.use-cache
+        id: cache-poetry
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
+      - name: Install poetry
+        # that is poetry's recommended way to install
+        run: |
+          pip install --upgrade pip
+          curl -sSL https://install.python-poetry.org | python -
+          pip list
+          poetry install -vv --all-extras --no-interaction
+          poetry show
+
+      - name: Save poetry cache if cache miss
+        if: inputs.use-cache && steps.cache-poetry.outputs.cache-hit != 'true'
+        run: echo "Cache miss, saving the cache"
+
+      - name: Run the service-specific setup script, if it exists
+        run: |
+          if test -f "${{ inputs.setup-script }}"; then
+            echo "Running setup script ${{ inputs.setup-script }}"
+            bash ${{ inputs.setup-script }}
+          else
+            echo "Setup script ${{ inputs.setup-script }} not found."
+          fi
+        env:
+            # The hostname used to communicate with the PostgreSQL service container
+            POSTGRES_HOST: localhost
+            POSTGRES_PORT: 5432
+      - name: Run tests
+        run: |
+          if test -f "${{ inputs.test-script }}"; then
+            echo "Running test script ${{ inputs.test-script }}"
+            bash ${{ inputs.test-script }}
+          else
+            echo "Test script ${{ inputs.test-script }} not found. Falling back to default command"
+            poetry run pytest -vv
+          fi
+        env:
+            # The hostname used to communicate with the PostgreSQL service container
+            POSTGRES_HOST: localhost
+            POSTGRES_PORT: 5432
+      - name: Submit Coveralls report
+        if: inputs.run-coveralls
+        uses: coverallsapp/github-action@v2

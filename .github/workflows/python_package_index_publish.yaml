@@ -1,0 +1,109 @@
+name: "PyPI Poetry Publish"
+
+# This expects tags to be available and assumes that the main branch is either
+# named `main` or `master`
+#
+# you can use this in a GH Action like this:
+#
+#  name: PyPI
+#  on:
+#    push:
+#      tags:
+#        - '*'
+#  jobs:
+#    PyPIPoetryPublish:
+#      name: PyPI Poetry Publish
+#      uses: uc-cdis/.github/.github/workflows/python_package_index_publish.yaml@master
+#      with:
+#          PYTHON_VERSION: '3.9'
+#          DO_TEST_PUBLISH_FIRST: true
+#      secrets:
+#        PYPI_TEST_API_TOKEN: ${{ secrets.PYPI_TEST_API_TOKEN }}
+#        PYPI_PROD_API_TOKEN: ${{ secrets.PYPI_PROD_API_TOKEN }}
+#
+on:
+  workflow_call:
+    inputs:
+      PYTHON_VERSION:
+        description: 'The Python version to use'
+        required: false
+        default: '3.9'
+        type: string
+      DO_TEST_PUBLISH_FIRST:
+        description: 'Whether or not to test publishing to Test PyPI first'
+        required: true
+        default: true
+        type: boolean
+    secrets:
+      PYPI_TEST_API_TOKEN:
+        required: false
+      PYPI_PROD_API_TOKEN:
+        required: true
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ inputs.PYTHON_VERSION }}
+
+      - name: Install poetry
+        # that is poetry's recommended way to install
+        run: |
+          pip install --upgrade pip
+          curl -sSL https://install.python-poetry.org | python -
+          pip list
+          poetry show
+      - name: Install dependencies
+        run: |
+          poetry install -vv --all-extras --no-interaction --no-cache
+          poetry show -vv
+        shell: bash
+
+      - name: Configure Test PyPI Repo
+        if: ${{ inputs.DO_TEST_PUBLISH_FIRST }}
+        env:
+          PYPI_TEST_API_TOKEN: ${{ secrets.PYPI_TEST_API_TOKEN }}
+        run: |
+          poetry config pypi-token.testpypi $PYPI_TEST_API_TOKEN
+        shell: bash
+
+      - name: Configure Prod PyPI Repo and Poetry Build
+        env:
+          PYPI_PROD_API_TOKEN: ${{ secrets.PYPI_PROD_API_TOKEN }}
+        run: |
+          poetry config repositories.testpypi https://test.pypi.org/legacy/
+          poetry config pypi-token.pypi $PYPI_PROD_API_TOKEN
+          poetry build
+        shell: bash
+
+      - name: Getting information
+        run: |
+          echo github.ref=${{ github.ref }}
+        shell: bash
+
+      - name: Publish to Test PyPI
+        id: test-pypi
+        if: ${{ inputs.DO_TEST_PUBLISH_FIRST && startsWith(github.ref, 'refs/tags/') }}
+        run: |
+          echo "Attempting a test publish before a real one. Note that a real one will only trigger on tags"
+          poetry publish -n -vv -r testpypi
+
+      - name: Publish to PyPI
+        id: prod-pypi
+        if: ${{ (!inputs.DO_TEST_PUBLISH_FIRST || (inputs.DO_TEST_PUBLISH_FIRST && steps.test-pypi.outcome == 'success')) && startsWith(github.ref, 'refs/tags/') }}
+        run: |
+          echo "Since this is a tagged release, do a real publish"
+          poetry publish -n -vv
+
+      - name: If Publish to PyPI Did Not Succeed, Fail Job
+        if: ${{ steps.prod-pypi.outcome != 'success' }}
+        run: |
+          echo "Since this is a tagged release, and the real publish failed or didn't run, fail the job"
+          exit 1

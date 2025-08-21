@@ -1,0 +1,64 @@
+# In order for GitHub Super Linter call to be used a template effectively,
+# we also need a common global configuration for linting.
+#
+# Because GitHub's Super Linter looks in the
+# .github folder for config information, and we don't want to duplicate these
+# files in all the repos, we need to create them on-the-fly from a central
+# template.
+#
+# The central template containing all the linter configuration is this one.
+#
+# This is separate from the actual `lint.yaml` which calls Super Linter so that
+# repos can override files as necessary.
+#
+# For example:
+#   - run `lint-create-config.yaml`
+#   - modify one of the configs:
+#     - echo "known_first_party=gen3discoveryai" >> .github/linters/.isort.cfg
+#   - run `lint.yaml`
+#
+---
+name: Lint Create Config
+on:
+  workflow_call:
+    inputs:
+      python-module-name:
+        description: 'Name of top-level Python module. This is used to add to the linter configs for proper detection of imports'
+        required: false
+        type: string
+jobs:
+  create-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Make dirs
+      run: |
+        mkdir .github
+        mkdir .github/linters
+
+    - name: Checkout Another Repository
+      uses: actions/checkout@v4
+      with:
+        repository: uc-cdis/.github
+        persist-credentials: false
+        sparse-checkout: |
+          .github/linters
+
+    - name: Use Python module path to update necessary linter configs
+      run: |
+        if [ -n "${{ inputs.python-module-name }}" ]; then
+          echo "Provided Python Module Name: ${{ inputs.python-module-name }}"
+
+          echo
+          echo "Updating .github/linters/.isort.cfg"
+          echo "known_first_party=${{ inputs.python-module-name }}"
+          echo "known_first_party=${{ inputs.python-module-name }}" >> .github/linters/.isort.cfg
+        fi
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: linters-config
+        path: |
+          .github/linters/
+        if-no-files-found: error
+        include-hidden-files: true

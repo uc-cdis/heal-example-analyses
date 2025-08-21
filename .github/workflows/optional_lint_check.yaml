@@ -1,0 +1,147 @@
+---
+name: Optional Lint Check
+# this is intended to show informational lint to inform updates, but the verbosity
+# of this may be too much to fail/prevent a merge because of these
+#
+# If you only want the REQUIRED linting checks with little verbosity, use the
+# `required_lint_check.yaml`.
+#
+# The intention is that this optional lint check runs on all PRs to provide info
+# but doesn't actually block any merge or build, but lets devs know key areas to
+# to improve
+#
+# The required lint check, is, well, required to pass and WILL block merges and builds,
+# but is much more opinionated and slim (there are only a few things we error on).
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        description: 'The Python version to use and defaults to latest'
+        required: false
+        default: '3.9'
+        type: string
+      use-cache:
+        required: false
+        default: true
+        type: boolean
+jobs:
+  build:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - uses: actions/download-artifact@v4
+        with:
+          # this is uploaded by the lint-create-config.yaml workflow
+          name: linters-config
+          path: .github/linters
+
+      - name: Display files
+        run: ls -aR
+
+      # cache the dependencies based on a hash of the lock file
+      - name: Poetry cache
+        if: inputs.use-cache
+        id: cache-poetry
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
+      - name: Install poetry so virtual env has imports that pylint can check
+        # that is poetry's recommended way to install
+        run: |
+          pip install --upgrade pip
+          curl -sSL https://install.python-poetry.org | python -
+          pip list
+          poetry install -vv --all-extras --no-interaction
+          poetry show
+
+      - name: Save poetry cache if cache miss
+        if: inputs.use-cache && steps.cache-poetry.outputs.cache-hit != 'true'
+        run: echo "Cache miss, saving the cache"
+
+      - name: Use Python module path to update necessary linter configs
+        run: |
+          virtual_env=$(poetry env info --path)
+          echo "Python Virtual Env Path: $virtual_env"
+
+          site_packages_folder=$(find $virtual_env -type d -name "site-packages" -print -quit)
+          if [ -n "$site_packages_folder" ]; then
+            echo "Found 'site-packages' folder at: $site_packages_folder"
+          else
+            echo "No 'site-packages' folder found in provided virtual env: $virtual_env."
+            exit 1
+          fi
+
+          echo
+          echo "Updating .github/linters/.python-lint"
+          echo "init-hook='import sys; sys.path.append(\".\"); sys.path.append(\"/tmp/lint\"); sys.path.append(\"$site_packages_folder\")'"
+          {
+            echo "[MAIN]"
+            echo "init-hook='import sys; sys.path.append(\".\"); sys.path.append(\"/tmp/lint\"); sys.path.append(\"$site_packages_folder\")'"
+            tail -n +3 .github/linters/.python-lint
+          } > .github/linters/.python-lint.tmp && mv .github/linters/.python-lint.tmp .github/linters/.python-lint
+
+
+      - name: Cat file(s)
+        run: cat .github/linters/.python-lint
+
+      - name: Lint Repo
+        uses: github/super-linter/slim@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          #
+          # !!!!!!!!!
+          # IF YOU UPDATE THESE ENV VARS,
+          # PLEASE ALSO UPDATE
+          # `.github/linters/super-linter.env`
+          # !!!!!!!!!
+          #
+          VALIDATE_ALL_CODEBASE: true
+          LOG_LEVEL: ERROR
+          VALIDATE_BASH: true
+          VALIDATE_BASH_EXEC: true
+          VALIDATE_CSS: true
+          VALIDATE_DOCKERFILE_HADOLINT: true
+          VALIDATE_EDITORCONFIG: true
+          VALIDATE_ENV: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_GO: true
+          VALIDATE_GROOVY: true
+          VALIDATE_HTML: true
+          VALIDATE_JAVA: true
+          VALIDATE_JAVASCRIPT_ES: true
+          VALIDATE_JAVASCRIPT_STANDARD: true
+          VALIDATE_JSCPD: true
+          VALIDATE_JSON: true
+          VALIDATE_KUBERNETES_KUBECONFORM: true
+          VALIDATE_LATEX: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_OPENAPI: true
+          VALIDATE_PERL: true
+          VALIDATE_POWERSHELL: true
+          VALIDATE_PYTHON: true
+          VALIDATE_PYTHON_BLACK: true
+          VALIDATE_PYTHON_FLAKE8: true
+          VALIDATE_PYTHON_ISORT: true
+          VALIDATE_PYTHON_PYLINT: true
+          VALIDATE_R: true
+          VALIDATE_RUBY: true
+          VALIDATE_SQL: true
+          VALIDATE_TYPESCRIPT_ES: true
+          VALIDATE_TYPESCRIPT_STANDARD: true
+          VALIDATE_XML: true
+          VALIDATE_YAML: true
