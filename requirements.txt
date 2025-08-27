@@ -16,7 +16,7 @@ mkdocs-redirects
 mkdocs-video==1.3.0
 packaging==21.3
 Pygments==2.13.0
-pymdown-extensions==9.5
+pymdown-extensions==10.0
 pyparsing==3.0.9
 python-dateutil==2.8.2
 PyYAML==6.0
