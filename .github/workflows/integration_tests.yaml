@@ -266,7 +266,7 @@ jobs:
           # Configure credentials to access cluster.
           - name: Configure AWS Credentials
             if: ${{ env.SKIP_TESTS != 'true' && env.GEN3_INSTANCE_TYPE == 'HELM_LOCAL' }}
-            uses: aws-actions/configure-aws-credentials@v4
+            uses: aws-actions/configure-aws-credentials@v5
             with:
                 role-to-assume: arn:aws:iam::707767160287:role/github-action-role
                 role-session-name: GitHub_to_AWS_via_FederatedOIDC
