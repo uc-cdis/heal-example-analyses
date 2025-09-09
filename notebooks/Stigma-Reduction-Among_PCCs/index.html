@@ -1,0 +1,1277 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://heal-docs-dev.io/notebooks/Stigma-Reduction-Among_PCCs/">
+      
+      <link rel="icon" href="../../img/heal_logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>Stigma Reduction Among PCCs - HEAL Example Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stigma-reduction-among-primary-care-clinicians-towards-people-with-oud-a-study-and-research-validation-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-header__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEAL Example Analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stigma Reduction Among PCCs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-nav__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    HEAL Example Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://healdata.org/" class="md-nav__link">
+        Return to Platform
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Example Analysis Notebooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Example Analysis Notebooks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Example Analysis Notebooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Stigma Reduction Among PCCs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Stigma Reduction Among PCCs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-j-m-maxwell-data-science-sr-analyst-ctds" class="md-nav__link">
+    By J M Maxwell - Data Science, Sr. Analyst - CTDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-python-libraries" class="md-nav__link">
+    Import Python Libraries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingest-and-prepare-data" class="md-nav__link">
+    Ingest And Prepare Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-study" class="md-nav__link">
+    About The Study
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demographic-summary-statistics-of-pccs-who-completed-stigma-or-attention-control-training" class="md-nav__link">
+    Demographic Summary Statistics of PCCs who completed stigma or attention control training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stigma-reduction-and-attention-control-training-on-self-reported-stigma-and-intentions-to-treat-people" class="md-nav__link">
+    Stigma Reduction and Attention-Control Training on Self-Reported Stigma and Intentions to Treat People
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlations-among-self-reported-sitgma-and-intentions-to-treat-people" class="md-nav__link">
+    Correlations among Self-Reported Sitgma and Intentions to Treat People
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    Citations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-j-m-maxwell-data-science-sr-analyst-ctds" class="md-nav__link">
+    By J M Maxwell - Data Science, Sr. Analyst - CTDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-python-libraries" class="md-nav__link">
+    Import Python Libraries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingest-and-prepare-data" class="md-nav__link">
+    Ingest And Prepare Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-study" class="md-nav__link">
+    About The Study
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demographic-summary-statistics-of-pccs-who-completed-stigma-or-attention-control-training" class="md-nav__link">
+    Demographic Summary Statistics of PCCs who completed stigma or attention control training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stigma-reduction-and-attention-control-training-on-self-reported-stigma-and-intentions-to-treat-people" class="md-nav__link">
+    Stigma Reduction and Attention-Control Training on Self-Reported Stigma and Intentions to Treat People
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlations-among-self-reported-sitgma-and-intentions-to-treat-people" class="md-nav__link">
+    Correlations among Self-Reported Sitgma and Intentions to Treat People
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    Citations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="stigma-reduction-among-primary-care-clinicians-towards-people-with-oud-a-study-and-research-validation-analysis">Stigma Reduction among Primary Care Clinicians towards People with OUD - A Study and Research Validation Analysis<a class="headerlink" href="#stigma-reduction-among-primary-care-clinicians-towards-people-with-oud-a-study-and-research-validation-analysis" title="Permanent link">&para;</a></h1>
+<h4 id="by-j-m-maxwell-data-science-sr-analyst-ctds">By J M Maxwell - Data Science, Sr. Analyst - CTDS<a class="headerlink" href="#by-j-m-maxwell-data-science-sr-analyst-ctds" title="Permanent link">&para;</a></h4>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>In this notebook, we’ll be replicating the published analyses by Hooker et al. in A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9922036/">PMC9922036</a>), in order to demonstrate how users might use these data. These data are available from NIDA Data Share through the HEAL Data Platform.</p>
+<p>There is an ongoing, dramatic rise in the number of opioid related overdose deaths in the United States, however only a small portion of patients who are diagnosed with Opioid Use Disorders (OUD) seek treatment and recieve medications for OUD (MOUD). MOUDs, like buprenorphine, can be effective forms of treatment for OUD patients, but only a portion of clinicians are waivered to, and in actuality do, prescribe buprenophine. A potential barrier to care for OUD patients may be the stigma held by primary care clinicians (PCCs) towards people with OUD. There are a limited number of interventions available for reducing OUD stigma among PCCs and a need for analytical support for the efficacy of these interventions. <em>A randomized controlled trial of an intervention...</em> examines whether PCCs' stigma towards people with OUD may be reduced and PCCs' intentions to treat OUD patients increased through online training interventions.</p>
+<p>This work was done exclusively to demonstrate the advantages of the HEAL Platform's Workspace feature and the ability to utilize data that is joined under the HEAL data mesh. While all the work here was completed by J M. Maxwell and members of the HEAL Platform team, this is not original work, and it is exclusively based off of the work completed by Hooker et al.</p>
+<p>The work here does not represent the official opinions, recommendations, or conclusions of Hooker et al. and this work does not represent policy or medical recommendations on behalf of the authors, the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.</p>
+<pre><code>Hooker, Stephanie A et al. “A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians.” Addiction science &amp; clinical practice vol. 18,1 10. 11 Feb. 2023, doi:10.1186/s13722-023-00366-1
+</code></pre>
+<h4 id="import-python-libraries">Import Python Libraries<a class="headerlink" href="#import-python-libraries" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="o">-</span><span class="n">q</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="o">-</span><span class="n">q</span>
+
+<span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+</code></pre></div>
+<h2 id="ingest-and-prepare-data">Ingest And Prepare Data<a class="headerlink" href="#ingest-and-prepare-data" title="Permanent link">&para;</a></h2>
+<p>In this section we ingest and prepare the data. We're particularly interested in the data fields related to the PCCs' attitude towards people with OUD, their attitudes towards treating people with OUD, and their demographic information.</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">gen3</span> <span class="n">drs</span><span class="o">-</span><span class="n">pull</span> <span class="nb">object</span> <span class="n">dg</span><span class="o">.</span><span class="n">H34L</span><span class="o">/</span><span class="n">a6c7fc23</span><span class="o">-</span><span class="mi">3534</span><span class="o">-</span><span class="mi">401</span><span class="n">c</span><span class="o">-</span><span class="mi">88</span><span class="n">ca</span><span class="o">-</span><span class="mi">9</span><span class="n">fbbb495dcf4</span>
+</code></pre></div>
+<pre><code>{"succeeded": ["dg.H34L/a6c7fc23-3534-401c-88ca-9fbbb495dcf4"], "failed": []}
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;ascii-crf-data-files_nida-ctn-0095a2 v1-1.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+
+    <span class="n">col_names</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;DDBS&#39;</span><span class="p">:</span> <span class="s1">&#39;Overall Stigma&#39;</span><span class="p">,</span> <span class="s1">&#39;DDBS_DIFF&#39;</span><span class="p">:</span> <span class="s1">&#39;Difference&#39;</span><span class="p">,</span> <span class="s1">&#39;DDBS_DISDAIN&#39;</span><span class="p">:</span> <span class="s1">&#39;Disdain&#39;</span><span class="p">,</span> <span class="s1">&#39;DDBS_BLAME2&#39;</span><span class="p">:</span> <span class="s1">&#39;Blame&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;INTEND_WAIVER&#39;</span><span class="p">:</span> <span class="s1">&#39;Intentions to get waivered&#39;</span><span class="p">,</span> <span class="s1">&#39;INTEND_PRESCRIBE&#39;</span><span class="p">:</span> <span class="s1">&#39;Intentions to prescribe buprenorphine&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;WILLWORK&#39;</span><span class="p">:</span> <span class="s1">&#39;Willingness to work with OUD&#39;</span><span class="p">,</span> <span class="s1">&#39;TX_EFFECTIVE&#39;</span><span class="p">:</span> <span class="s1">&#39;Perceived OUD treatment effectiveness&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;TX_ADHERENCE&#39;</span><span class="p">:</span> <span class="s1">&#39;Perceived OUD treatment adherence&#39;</span><span class="p">,</span> <span class="s1">&#39;PCC_AGE&#39;</span><span class="p">:</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;PCC_GENDER&#39;</span><span class="p">:</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;PCC_RACE&#39;</span><span class="p">:</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;PCC_HISPANIC&#39;</span><span class="p">:</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">,</span> <span class="s1">&#39;STIGMA_GROUP&#39;</span><span class="p">:</span> <span class="s1">&#39;Stigma Group&#39;</span><span class="p">,</span> <span class="s1">&#39;PCC_WAIVERED&#39;</span><span class="p">:</span> <span class="s1">&#39;Waivered to prescribe buprenorphine&#39;</span><span class="p">,</span> <span class="s1">&#39;PCC_MD&#39;</span><span class="p">:</span> <span class="s1">&#39;Degree&#39;</span><span class="p">}</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">col_names</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;STIG_CLIN_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;HLTH_SYS_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;PCC_ID&#39;</span><span class="p">,</span> <span class="s1">&#39;COMPLETE_TRAINING&#39;</span><span class="p">,</span> <span class="s1">&#39;COMPLETE_SURVEY&#39;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="n">field</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">df</span><span class="o">.</span><span class="n">Gender</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">7.0</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">Ethnicity</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Ethnicity</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">7.0</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Race</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;5 White&#39;</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span> <span class="s1">&#39;9 Prefer not to answer&#39;</span><span class="p">:</span> <span class="s1">&#39;Prefer not to answer&#39;</span><span class="p">,</span> <span class="s1">&#39;2 Asian&#39;</span><span class="p">:</span> <span class="s1">&#39;Asian&#39;</span><span class="p">,</span> <span class="s1">&#39;3 Black or African American&#39;</span><span class="p">:</span> <span class="s1">&#39;Black or African American&#39;</span><span class="p">,</span>
+                              <span class="s1">&#39;7 Multiple selected&#39;</span><span class="p">:</span> <span class="s1">&#39;Multiple selected&#39;</span><span class="p">,</span> <span class="s1">&#39;6 Some other race&#39;</span><span class="p">:</span> <span class="s1">&#39;Some other race&#39;</span><span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mf">2.0</span><span class="p">:</span> <span class="s1">&#39;Female&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">:</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">:</span> <span class="s1">&#39;Not Listed&#39;</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">:</span> <span class="s1">&#39;Prefer not to answer&#39;</span><span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Ethnicity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Ethnicity</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mf">0.0</span><span class="p">:</span> <span class="s1">&#39;Not Hispanic or Latino&#39;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">:</span> <span class="s1">&#39;Hispanic or Latino&#39;</span><span class="p">,</span>  <span class="mf">7.0</span><span class="p">:</span> <span class="s1">&#39;Missing&#39;</span><span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Waivered to prescribe buprenorphine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Waivered to prescribe buprenorphine&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;True&#39;</span><span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Degree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Degree</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;MD/DO&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;PA/NP&#39;</span><span class="p">})</span>
+
+    <span class="n">keep_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">,</span> <span class="s1">&#39;Overall Stigma&#39;</span><span class="p">,</span> <span class="s1">&#39;Difference&#39;</span><span class="p">,</span> <span class="s1">&#39;Disdain&#39;</span><span class="p">,</span> <span class="s1">&#39;Blame&#39;</span><span class="p">,</span>
+                                                  <span class="s1">&#39;Intentions to get waivered&#39;</span><span class="p">,</span> <span class="s1">&#39;Intentions to prescribe buprenorphine&#39;</span><span class="p">,</span>
+                                                  <span class="s1">&#39;Willingness to work with OUD&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceived OUD treatment effectiveness&#39;</span><span class="p">,</span>
+                                                  <span class="s1">&#39;Perceived OUD treatment adherence&#39;</span><span class="p">,</span> <span class="s1">&#39;Waivered to prescribe buprenorphine&#39;</span><span class="p">,</span>
+                                                  <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Degree&#39;</span><span class="p">]))</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">keep_list</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span> <span class="nf">make_print_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+
+    <span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Waivered to prescribe buprenorphine&#39;</span><span class="p">,</span> <span class="s1">&#39;Degree&#39;</span><span class="p">]</span>
+    <span class="n">all_subj</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">print_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+    <span class="n">N_AC</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">&#39;STIG_CTRL&#39;</span><span class="p">])</span>
+    <span class="n">N_SR</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="s1">&#39;STIG_INT&#39;</span><span class="p">])</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N_AC</span> <span class="o">+</span> <span class="n">N_SR</span>
+
+    <span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
+        <span class="n">print_df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Category&#39;</span><span class="p">:</span>  <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feat</span><span class="si">}</span><span class="s1"> - &#39;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;All N=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)}</span> <span class="p">)</span>
+        <span class="n">print_df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Category&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feat</span><span class="si">}</span><span class="s1"> - &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_INT&#39;</span><span class="p">][</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_INT&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Stigma reduction n = </span><span class="si">{</span><span class="n">N_SR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_INT&#39;</span><span class="p">][</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_INT&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)}</span> <span class="p">)</span>
+        <span class="n">print_df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Category&#39;</span><span class="p">:</span>  <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">feat</span><span class="si">}</span><span class="s1"> - &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_CTRL&#39;</span><span class="p">][</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_CTRL&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Attention-control n = </span><span class="si">{</span><span class="n">N_AC</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span>  <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_CTRL&#39;</span><span class="p">][</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_CTRL&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)}</span> <span class="p">)</span>
+
+        <span class="n">print_df1</span> <span class="o">=</span> <span class="n">print_df1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">print_df2</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Category&#39;</span><span class="p">)</span>
+        <span class="n">print_df1</span> <span class="o">=</span> <span class="n">print_df1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">print_df3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Category&#39;</span><span class="p">)</span>
+        <span class="n">print_df1</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">print_df1</span><span class="p">[[</span><span class="sa">f</span><span class="s1">&#39;All N=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Stigma reduction n = </span><span class="si">{</span><span class="n">N_SR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Attention-control n = </span><span class="si">{</span><span class="n">N_AC</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">print_df1</span><span class="p">[[</span><span class="sa">f</span><span class="s1">&#39;All N=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Stigma reduction n = </span><span class="si">{</span><span class="n">N_SR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Attention-control n = </span><span class="si">{</span><span class="n">N_AC</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+        <span class="n">print_df1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;All N=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">print_df1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;All N=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+        <span class="n">print_df1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Stigma reduction n = </span><span class="si">{</span><span class="n">N_SR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">print_df1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Stigma reduction n = </span><span class="si">{</span><span class="n">N_SR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+        <span class="n">print_df1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Attention-control n = </span><span class="si">{</span><span class="n">N_AC</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">print_df1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Attention-control n = </span><span class="si">{</span><span class="n">N_AC</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
+        <span class="n">print_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">print_df</span><span class="p">,</span> <span class="n">print_df1</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">feat</span> <span class="o">!=</span> <span class="s1">&#39;Degree&#39;</span><span class="p">:</span>
+            <span class="n">print_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">print_df</span><span class="p">,</span>  <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Category&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="sa">f</span><span class="s1">&#39;All N=</span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="sa">f</span><span class="s1">&#39;Stigma reduction n = </span><span class="si">{</span><span class="n">N_SR</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">],</span> <span class="sa">f</span><span class="s1">&#39;Attention-control n = </span><span class="si">{</span><span class="n">N_AC</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">]</span> <span class="p">})])</span>
+
+
+    <span class="k">return</span> <span class="n">print_df</span>
+
+<span class="k">def</span> <span class="nf">make_impact_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
+    <span class="n">stig_int</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">stig_ctrl</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">t_vals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">p_vals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">d_vals</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">cohen_d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+        <span class="n">nx</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">ny</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">dof</span> <span class="o">=</span> <span class="n">nx</span> <span class="o">+</span> <span class="n">ny</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">nx</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">ny</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">dof</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">feat</span> <span class="ow">in</span> <span class="n">features</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_INT&#39;</span><span class="p">][</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stigma Group&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;STIG_CTRL&#39;</span><span class="p">][</span><span class="n">feat</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+        <span class="c1"># Perform the t-test</span>
+        <span class="n">t_statistic</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">cohen_d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">stig_int</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">stig_ctrl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">t_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t_statistic</span><span class="p">)</span>
+        <span class="n">p_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_value</span><span class="p">)</span>
+        <span class="n">d_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+    <span class="n">impact_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Feature&quot;</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span>
+                        <span class="s2">&quot;Stigma Reduction Mean (SD)&quot;</span><span class="p">:</span> <span class="n">stig_int</span><span class="p">,</span>
+                        <span class="s2">&quot;Attention Control Mean (SD)&quot;</span><span class="p">:</span> <span class="n">stig_ctrl</span><span class="p">,</span>
+                        <span class="s2">&quot;t-statistic&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                        <span class="s2">&quot;p-value&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">p_vals</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                        <span class="s2">&quot;Cohen&#39;s d-value&quot;</span><span class="p">:</span> <span class="n">d_vals</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">impact_df</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;stigma_supp.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Race</th>
+<th align="right">Intentions to prescribe buprenorphine</th>
+<th align="left">Degree</th>
+<th align="right">Overall Stigma</th>
+<th align="right">Difference</th>
+<th align="right">Willingness to work with OUD</th>
+<th align="left">Stigma Group</th>
+<th align="right">Blame</th>
+<th align="right">Intentions to get waivered</th>
+<th align="right">Perceived OUD treatment effectiveness</th>
+<th align="left">Ethnicity</th>
+<th align="left">Waivered to prescribe buprenorphine</th>
+<th align="right">Disdain</th>
+<th align="left">Gender</th>
+<th align="right">Perceived OUD treatment adherence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">White</td>
+<td align="right">3</td>
+<td align="left">MD/DO</td>
+<td align="right">5.75</td>
+<td align="right">5.33</td>
+<td align="right">2</td>
+<td align="left">STIG_CTRL</td>
+<td align="right">5.5</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="left">Not Hispanic or Latino</td>
+<td align="left">False</td>
+<td align="right">6.33</td>
+<td align="left">Male</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">White</td>
+<td align="right">2</td>
+<td align="left">MD/DO</td>
+<td align="right">4.5</td>
+<td align="right">3.33</td>
+<td align="right">3</td>
+<td align="left">STIG_INT</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="left">Not Hispanic or Latino</td>
+<td align="left">False</td>
+<td align="right">5.33</td>
+<td align="left">Male</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">White</td>
+<td align="right">3</td>
+<td align="left">MD/DO</td>
+<td align="right">4.88</td>
+<td align="right">4.33</td>
+<td align="right">3</td>
+<td align="left">STIG_CTRL</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="left">Not Hispanic or Latino</td>
+<td align="left">False</td>
+<td align="right">5.33</td>
+<td align="left">Male</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">White</td>
+<td align="right">2</td>
+<td align="left">MD/DO</td>
+<td align="right">4</td>
+<td align="right">3.67</td>
+<td align="right">2.67</td>
+<td align="left">STIG_INT</td>
+<td align="right">3.5</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="left">Not Hispanic or Latino</td>
+<td align="left">False</td>
+<td align="right">4.67</td>
+<td align="left">Female</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">White</td>
+<td align="right">3</td>
+<td align="left">PA/NP</td>
+<td align="right">4.25</td>
+<td align="right">4.33</td>
+<td align="right">2.67</td>
+<td align="left">STIG_INT</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="left">Not Hispanic or Latino</td>
+<td align="left">False</td>
+<td align="right">5</td>
+<td align="left">Female</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="about-the-study">About The Study<a class="headerlink" href="#about-the-study" title="Permanent link">&para;</a></h2>
+<p>The study used by Hooker et. al. for their research was conducted by a nonprofit healthcare organization, HealthPartners, servicing Minnesota and Wisconsin. PCCs who are part of the 15 HealPartners clinics that have access to a CDS tool for identifying and treating people with OUD were invited to participate in the study. The study was a randomized, controlled trial where PCCs recieved one of two trainings: a stigma reduction training or an attention-control training. Following training, the PCCs were assesed at 6 months, 3 months and immediately following completion of the training for their stigma against people with OUD, their intention to get waivered, and their intention to prescribe buprenorphine. Of the 162 PCCs who were eligible, 85 completed both the training and the immediate post training survey (n=46 stigma training and n=39 attention-control training).</p>
+<p>The stigma reduction training was a series of videos recounting OUD patient narratives, examples of using non-stigmatizing language, and explanantions on how to use a Clincal Decision Support (CDS) tool designed to enable PCCs to screen, diagnose, and treat patients with OUD. The attention-control training controlled for contact, attention, and extra CDS tool training, but did not include the OUD patient narratives or examples of non-stigmatized language.</p>
+<p>The outcome measures which were used in this analysis were assessed through a survey immediately following training. The relevant primary and secondary outcome measurements were:
+- <em>OUD Stigma</em> - measured using the <em>Blame</em>, <em>Disdain</em>, and <em>Difference</em> scales and the composite <em>Overall Stigma</em> scale.
+- <em>Intentions to get waivered or prescribe buprenorphine</em> - measured on a 1-5 scale the likelihood to get waivered to prescribe buprenorphine or to prescribe buprenorphine should a waiver no longer be required.
+- <em>Willingness to work with people with OUD</em> - measured as the average of 3 questionnaire items (each scaled 1-5) from the Drug Problems Perceptions Questionnaire, where a higher score indicates a greater overall willingness to work with patients with OUD.
+- <em>Opioid treatment outcome expectations</em> - measured on a scale 1-4 on PCCs expecations for the effectiveness and likelihood of patient adherence to OUD treatment.</p>
+<h2 id="demographic-summary-statistics-of-pccs-who-completed-stigma-or-attention-control-training">Demographic Summary Statistics of PCCs who completed stigma or attention control training<a class="headerlink" href="#demographic-summary-statistics-of-pccs-who-completed-stigma-or-attention-control-training" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">print_df</span> <span class="o">=</span> <span class="n">make_print_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">print_df</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Category</th>
+<th align="left">All N=85</th>
+<th align="left">Stigma reduction n = 46</th>
+<th align="left">Attention-control n = 39</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">Gender - Female</td>
+<td align="left">57.65%</td>
+<td align="left">58.7%</td>
+<td align="left">56.41%</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Gender - Male</td>
+<td align="left">36.47%</td>
+<td align="left">36.96%</td>
+<td align="left">35.9%</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Gender - Prefer not to answer</td>
+<td align="left">4.71%</td>
+<td align="left">2.17%</td>
+<td align="left">7.69%</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Gender - Not Listed</td>
+<td align="left">1.18%</td>
+<td align="left">2.17%</td>
+<td align="left">0.0%</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">Ethnicity - Not Hispanic or Latino</td>
+<td align="left">94.12%</td>
+<td align="left">97.83%</td>
+<td align="left">89.74%</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Ethnicity - Hispanic or Latino</td>
+<td align="left">3.53%</td>
+<td align="left">2.17%</td>
+<td align="left">5.13%</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Ethnicity - Missing</td>
+<td align="left">2.35%</td>
+<td align="left">0.0%</td>
+<td align="left">5.13%</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">Race - White</td>
+<td align="left">67.06%</td>
+<td align="left">63.04%</td>
+<td align="left">71.79%</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Race - Prefer not to answer</td>
+<td align="left">14.12%</td>
+<td align="left">15.22%</td>
+<td align="left">12.82%</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Race - Asian</td>
+<td align="left">9.41%</td>
+<td align="left">13.04%</td>
+<td align="left">5.13%</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Race - Black or African American</td>
+<td align="left">7.06%</td>
+<td align="left">6.52%</td>
+<td align="left">7.69%</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Race - Multiple selected</td>
+<td align="left">1.18%</td>
+<td align="left">0.0%</td>
+<td align="left">2.56%</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">Race - Some other race</td>
+<td align="left">1.18%</td>
+<td align="left">2.17%</td>
+<td align="left">0.0%</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">Waivered to prescribe buprenorphine - False</td>
+<td align="left">90.59%</td>
+<td align="left">93.48%</td>
+<td align="left">87.18%</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Waivered to prescribe buprenorphine - True</td>
+<td align="left">9.41%</td>
+<td align="left">6.52%</td>
+<td align="left">12.82%</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="left">Degree - MD/DO</td>
+<td align="left">64.71%</td>
+<td align="left">65.22%</td>
+<td align="left">64.1%</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Degree - PA/NP</td>
+<td align="left">35.29%</td>
+<td align="left">34.78%</td>
+<td align="left">35.9%</td>
+</tr>
+</tbody>
+</table>
+<p>In this first table we have a breakdown of the demographic characteristics of the participating PCCs split amongst the two training formats. There are no significant differences between the stigma and attention-control training groups in their demographics, their medical degree type, or their pre-existing waiver to prescribe burprenorphine.</p>
+<h2 id="stigma-reduction-and-attention-control-training-on-self-reported-stigma-and-intentions-to-treat-people">Stigma Reduction and Attention-Control Training on Self-Reported Stigma and Intentions to Treat People<a class="headerlink" href="#stigma-reduction-and-attention-control-training-on-self-reported-stigma-and-intentions-to-treat-people" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Overall Stigma&#39;</span><span class="p">,</span> <span class="s1">&#39;Difference&#39;</span><span class="p">,</span> <span class="s1">&#39;Disdain&#39;</span><span class="p">,</span> <span class="s1">&#39;Blame&#39;</span><span class="p">,</span>  <span class="s1">&#39;Intentions to get waivered&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Intentions to prescribe buprenorphine&#39;</span><span class="p">,</span> <span class="s1">&#39;Willingness to work with OUD&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceived OUD treatment effectiveness&#39;</span><span class="p">,</span> <span class="s1">&#39;Perceived OUD treatment adherence&#39;</span><span class="p">]</span>
+<span class="n">impact_df</span> <span class="o">=</span> <span class="n">make_impact_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">features</span><span class="p">)</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">impact_df</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Feature</th>
+<th align="left">Stigma Reduction Mean (SD)</th>
+<th align="left">Attention Control Mean (SD)</th>
+<th align="right">t-statistic</th>
+<th align="right">p-value</th>
+<th align="right">Cohen's d-value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">Overall Stigma</td>
+<td align="left">4.1 (1.3)</td>
+<td align="left">4.2 (1.2)</td>
+<td align="right">-0.481</td>
+<td align="right">0.632</td>
+<td align="right">-0.1</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Difference</td>
+<td align="left">3.4 (1.7)</td>
+<td align="left">3.1 (1.7)</td>
+<td align="right">0.741</td>
+<td align="right">0.461</td>
+<td align="right">0.16</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Disdain</td>
+<td align="left">4.7 (1.4)</td>
+<td align="left">4.9 (1.4)</td>
+<td align="right">-0.859</td>
+<td align="right">0.393</td>
+<td align="right">-0.19</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Blame</td>
+<td align="left">4.4 (1.6)</td>
+<td align="left">4.8 (1.6)</td>
+<td align="right">-1.286</td>
+<td align="right">0.202</td>
+<td align="right">-0.28</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Intentions to get waivered</td>
+<td align="left">2.3 (0.7)</td>
+<td align="left">2.1 (0.8)</td>
+<td align="right">1.113</td>
+<td align="right">0.269</td>
+<td align="right">0.26</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">Intentions to prescribe buprenorphine</td>
+<td align="left">3.2 (1.0)</td>
+<td align="left">3.0 (0.9)</td>
+<td align="right">0.899</td>
+<td align="right">0.372</td>
+<td align="right">0.21</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left">Willingness to work with OUD</td>
+<td align="left">3.0 (0.7)</td>
+<td align="left">3.1 (0.9)</td>
+<td align="right">-0.828</td>
+<td align="right">0.41</td>
+<td align="right">-0.18</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left">Perceived OUD treatment effectiveness</td>
+<td align="left">2.6 (0.8)</td>
+<td align="left">2.7 (0.7)</td>
+<td align="right">-0.745</td>
+<td align="right">0.459</td>
+<td align="right">-0.16</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left">Perceived OUD treatment adherence</td>
+<td align="left">2.5 (0.6)</td>
+<td align="left">2.4 (0.6)</td>
+<td align="right">0.15</td>
+<td align="right">0.881</td>
+<td align="right">0.03</td>
+</tr>
+</tbody>
+</table>
+<p>In the second table we show a number of descriptive statistics for measuring the difference amongst the two training groups in self-reported stigma (Overall Stigma, Difference, Disdain, and Blame), intentions for getting waivered or to prescribe buprenophine if waivered, and perceptions of people with OUD and OUD treatment. The mean and standard deviations for both training groups, as well as, the t-statistic, corresponding p-value, and Cohen's d-value all demonstrate that there are minimal or no significant differences between the two training groups across all measured training outcomes.</p>
+<h2 id="correlations-among-self-reported-sitgma-and-intentions-to-treat-people">Correlations among Self-Reported Sitgma and Intentions to Treat People<a class="headerlink" href="#correlations-among-self-reported-sitgma-and-intentions-to-treat-people" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">))</span>
+<span class="n">corr_matrix</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">]</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">corr_matrix</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+<th align="right">6</th>
+<th align="right">7</th>
+<th align="right">8</th>
+<th align="right">9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Overall Stigma</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Difference</td>
+<td align="right">0.84</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Disdain</td>
+<td align="right">0.79</td>
+<td align="right">0.47</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Blame</td>
+<td align="right">0.64</td>
+<td align="right">0.31</td>
+<td align="right">0.33</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Intentions to get waivered</td>
+<td align="right">-0.25</td>
+<td align="right">-0.06</td>
+<td align="right">-0.23</td>
+<td align="right">-0.35</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Intentions to prescribe buprenorphine</td>
+<td align="right">-0.25</td>
+<td align="right">-0.11</td>
+<td align="right">-0.18</td>
+<td align="right">-0.35</td>
+<td align="right">0.61</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Willingness to work with OUD</td>
+<td align="right">-0.4</td>
+<td align="right">-0.34</td>
+<td align="right">-0.29</td>
+<td align="right">-0.34</td>
+<td align="right">0.42</td>
+<td align="right">0.46</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Perceived OUD treatment effectiveness</td>
+<td align="right">-0.32</td>
+<td align="right">-0.19</td>
+<td align="right">-0.26</td>
+<td align="right">-0.38</td>
+<td align="right">0.21</td>
+<td align="right">0.29</td>
+<td align="right">0.46</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="left">Perceived OUD treatment adherence</td>
+<td align="right">-0.39</td>
+<td align="right">-0.28</td>
+<td align="right">-0.31</td>
+<td align="right">-0.35</td>
+<td align="right">0.17</td>
+<td align="right">0.22</td>
+<td align="right">0.36</td>
+<td align="right">0.62</td>
+<td align="right">nan</td>
+</tr>
+</tbody>
+</table>
+<p>In the final table above, we can see how self-reported stigma, intentions for getting waivered or to prescribe buprenophine if waivered, and perceptions of people with OUD and OUD treatment are related. We use Pearson's correlation coefficients to measure the relation between the measured training outcomes.</p>
+<p>Unsurprisingly, the components for measuring stigma are strongly, positively correlated. We can also see moderate or high positive correlations between Perceived OUD treatment adherence and treatment effectiveness, between PCCs' intentions to get waivered and to prescribe buprenorphine, and between PCCs' willingness to work with OUD patients and the PCCs intentions to prescribe buprenorphine and their perceived OUD treatment effectiveness/adherence.</p>
+<p>There is also a slight or moderate negative correlation between PCCs' self-reported stigma and their intensions to work with OUD patients, their percieved OUD treatment effectiveness/adherence, and their intention to get waivered and prescribe buprenorphine.</p>
+<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
+<p>The study demonstrated there was little relation between the provided stigma reduction training and PCCs' stigma, future intentions, willingness to work with OUD patients, or PCCs' perception of treatment effectiveness or patient treatment adherence. As was expected, there was a relation amongst PCCs' established stigma and their willingness to work with OUD patients and their perceptions of OUD treatment effectiveness and adherence.</p>
+<p>Since greater established PCC stigma is shown to inversely relate to PCCs' willingness to treat people with OUD, intentions to prescribe buprenophine, and perceptions regarding treatment effectiveness and patient adherence to treatment, it is important to find more effective intervention methods for reducing stigma.</p>
+<h3 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h3>
+<pre><code>Hooker, Stephanie A et al. “A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians.” Addiction science &amp; clinical practice vol. 18,1 10. 11 Feb. 2023, doi:10.1186/s13722-023-00366-1
+
+Hooker, S., Rossum, R., Crain, L., Bart, G. "Reducing Stigma toward People with Opioid Use Disorder among Primary Care Clinicians." NIDA Data Share. May 2024, NIDA-CTN-0095A2
+</code></pre>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQs" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              FAQs
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+    
+  </body>
+</html>
