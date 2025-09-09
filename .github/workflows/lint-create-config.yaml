@@ -37,7 +37,7 @@ jobs:
         mkdir .github/linters
 
     - name: Checkout Another Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: uc-cdis/.github
         persist-credentials: false
