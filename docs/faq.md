@@ -13,4 +13,4 @@ hide:
 
 2. How can I work with the data in HEAL Workspaces?
 
-    The [HEAL Workspaces](https://heal.github.io/platform-documentation/platform_workspaces/) documentation has information on how you may access HEAL Workspaces.
+    The [HEAL Workspaces](https://heal.github.io/platform-documentation/platform_workspaces/) documentation has information on how you may access and use HEAL Workspaces.
