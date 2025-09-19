@@ -6,9 +6,9 @@ nav:
   - Home: index.md
   - Return to Platform: https://healdata.org/
   - Example Analysis Notebooks:
-    #- BACPAC Synthetic Data Analysis: notebooks/BACPAC_Synthetic_Data_Analysis.md
+    - BACPAC Synthetic Data Analysis: notebooks/BACPAC_Synthetic_Data_Analysis.md
     - Stigma Reduction Among PCCs: notebooks/Stigma-Reduction-Among_PCCs.md
-    #- Threshold Identification Of A Opioid Risk Metric: notebooks/Threshold_Identification_Of_A_Opioid_Risk_Metric.md
+    - Opioid Risk Metric Threshold Identification - Study Recreation: notebooks/Opioid_Risk_Metric_Threshold_Identification-Study_Recreation.md
     #- Non-Opioid Treatment Of Neuropathic Pain: notebooks/High-Resolution-Spinal-Cord-Stimulation-for-Non-Opioid-Treatment-of-Neuropathic-Pain.md
     #- MTF 12th Grader Opiate Use In 2019: notebooks/Monitoring_The_Future_12th_Grader_Opiate_Use_In_2019.md
   - FAQs: faq.md
