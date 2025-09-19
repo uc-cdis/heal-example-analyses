@@ -1,0 +1,907 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://heal-docs-dev.io/notebooks/Opioid_Risk_Metric_Threshold_Identification-Study_Recreation/">
+      
+      <link rel="icon" href="../../img/heal_logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>Opioid Risk Metric Threshold Identification - Study Recreation - HEAL Example Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#opioid-risk-metric-threshold-identification-study-recreation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-header__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEAL Example Analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Opioid Risk Metric Threshold Identification - Study Recreation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-nav__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    HEAL Example Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://healdata.org/" class="md-nav__link">
+        Return to Platform
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Example Analysis Notebooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Example Analysis Notebooks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Example Analysis Notebooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BACPAC_Synthetic_Data_Analysis/" class="md-nav__link">
+        BACPAC Synthetic Data Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Stigma-Reduction-Among_PCCs/" class="md-nav__link">
+        Stigma Reduction Among PCCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Opioid Risk Metric Threshold Identification - Study Recreation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Opioid Risk Metric Threshold Identification - Study Recreation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-j-m-maxwell" class="md-nav__link">
+    - J M. Maxwell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-data" class="md-nav__link">
+    Access Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preprocessing" class="md-nav__link">
+    Data Preprocessing
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Preprocessing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-data" class="md-nav__link">
+    Read Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-data" class="md-nav__link">
+    Clean Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-assist-risk-levels" class="md-nav__link">
+    Calculate ASSIST Risk Levels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculate-narcotic-score-risk-levels" class="md-nav__link">
+    Calculate Narcotic Score Risk Levels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discriminating-validity-of-the-ns-metric" class="md-nav__link">
+    Discriminating Validity of the NS metric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-threshold-scores" class="md-nav__link">
+    Risk Threshold Scores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-and-conclusions" class="md-nav__link">
+    Discussion And Conclusions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-j-m-maxwell" class="md-nav__link">
+    - J M. Maxwell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-data" class="md-nav__link">
+    Access Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preprocessing" class="md-nav__link">
+    Data Preprocessing
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Preprocessing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-data" class="md-nav__link">
+    Read Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-data" class="md-nav__link">
+    Clean Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculate-assist-risk-levels" class="md-nav__link">
+    Calculate ASSIST Risk Levels
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculate-narcotic-score-risk-levels" class="md-nav__link">
+    Calculate Narcotic Score Risk Levels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discriminating-validity-of-the-ns-metric" class="md-nav__link">
+    Discriminating Validity of the NS metric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-threshold-scores" class="md-nav__link">
+    Risk Threshold Scores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-and-conclusions" class="md-nav__link">
+    Discussion And Conclusions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="opioid-risk-metric-threshold-identification-study-recreation">Opioid Risk Metric Threshold Identification - Study Recreation<a class="headerlink" href="#opioid-risk-metric-threshold-identification-study-recreation" title="Permanent link">&para;</a></h1>
+<h4 id="-j-m-maxwell">- J M. Maxwell<a class="headerlink" href="#-j-m-maxwell" title="Permanent link">&para;</a></h4>
+<p>In this notebook we will be recreating the work by Cochran et al. from the paper <em>Validation and Threshold Identification of a Prescription Drug Monitoring Program Clinical Opioid Risk Metric with the WHO Alcohol, Smoking, and Substance Involvement Screening Test</em>. We will be utilizing data from the study <em>Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool</em> to recreate a number of the images and graphs as seen in the paper.</p>
+<p>This work was strictly done to demonstrate the advantages of the HEAL Platform's Workspace feature and the ability to utilize data that is joined under the HEAL data mesh. While all the work here was completed by J M. Maxwell and members of the HEAL Platform team, this is not original work, and it is exclusively based off of the work completed by Cochran et al. Due to compounding factors relating to variations in data cleaning methodologies, the work presented here will slightly vary from the results published in <em>Validation and Threshold Identification...</em> by Cochran et al.</p>
+<p>The work here does not represent the official opinions, recommendations, or conclusions of Cochran et al. and this work does not represent policy or medical recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.</p>
+<h2 id="access-data">Access Data<a class="headerlink" href="#access-data" title="Permanent link">&para;</a></h2>
+<p>To access the data from this study make sure you are logged in to the InCommon login option and then:
+1) Go to the HEAL discovery page to select the study
+2) Select the 'Open In Workspace' option and choose the (Tutorials) Example Analysis Jupyter Lab Notebooks workspace option
+3) Use the exported study manifest to download the study.</p>
+<p>Otherwise you may run the follwowing gen3-sdk command to download the relevant CSV file from the study.</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">gen3</span> <span class="n">drs</span><span class="o">-</span><span class="n">pull</span> <span class="nb">object</span> <span class="n">dg</span><span class="o">.</span><span class="n">H34L</span><span class="o">/</span><span class="n">f3de0abd</span><span class="o">-</span><span class="mi">5338</span><span class="o">-</span><span class="mi">4</span><span class="n">b42</span><span class="o">-</span><span class="mi">8689</span><span class="o">-</span><span class="mi">04</span><span class="n">dfc46a6dbb</span>
+</code></pre></div>
+<pre><code>{"succeeded": ["dg.H34L/f3de0abd-5338-4b42-8689-04dfc46a6dbb"], "failed": []}
+</code></pre>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The Prescription Drug Monitoring Program (PDMP) is a highly available tool pharmacists may use to identify patients who are potentially misusing or abusing opioids. However, in practice, mixed results have been achieved in the application of PDMP to improve opioid safety. The output of PDMP information that pharmacists have access to is often un-summarized and of limited clinical value. Appriss Health has developed the Narcotic Score (NS) metric, a novel opioid risk identification metric, with the hope of offering to community pharmacists a clinical metric for identifying subjects with a high risk of opioid misuse and guidelines for promoting response and resources to those high risk individuals.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<p>In their paper, Cochran et al. describe how the NS metric, composed of a collection of survey responses, is a continuous scale from 000-999; the first two numbers are a composite risk score derived from a collection of well known risk indicators and the third number is the total number of active opioid prescriptions (coded 0-9+). They compared and scaled the NS metric to the WHO Alcohol, Smoking, and Substance Involvement Screening Test (ASSIST), which is considered a gold-standard for assessing drug use risk. They then calculated the risk threshold identifications using the ASSIST prescription opioid subscale and all participants were sorted into one of three risk categories - low, moderate, and high.</p>
+<h2 id="data-preprocessing">Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="o">-</span><span class="n">q</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit_learn</span> <span class="o">-</span><span class="n">q</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+</code></pre></div>
+<h4 id="read-data">Read Data<a class="headerlink" href="#read-data" title="Permanent link">&para;</a></h4>
+<p>Read in the data and filter by the relevant data fields: Unique Identifier, Narcotic Score, and ASSIST prescription opioid subscale responses.</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;CTN0093_csv.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_object</span><span class="p">:</span>
+    <span class="n">zip_object</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;CTN0093_FINAL_DATASET.csv&#39;</span><span class="p">)</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;RX_OPIOID&#39;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;NARCOTICSCORE&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="right">ID</th>
+<th align="right">NARCOTICSCORE</th>
+<th align="right">ASSIST_EVER_RX_OPIOID</th>
+<th align="right">ASSIST_3MONTH_RX_OPIOID</th>
+<th align="right">ASSIST_DESIRE_RX_OPIOID</th>
+<th align="right">ASSIST_ISSUES_RX_OPIOID</th>
+<th align="right">ASSIST_FAILED_RX_OPIOID</th>
+<th align="right">ASSIST_WORRY_RX_OPIOID</th>
+<th align="right">ASSIST_NO_CURB_RX_OPIOID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="right">175702</td>
+<td align="right">341</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">958356</td>
+<td align="right">120</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">280698</td>
+<td align="right">451</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">324612</td>
+<td align="right">381</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">453755</td>
+<td align="right">321</td>
+<td align="right">0</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clean-data">Clean Data<a class="headerlink" href="#clean-data" title="Permanent link">&para;</a></h4>
+<p>Map fields from string to integer values, remove observations with missing ASSIST responses, and replace missing values.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span> <span class="o">!=</span> <span class="s1">&#39;Not in Appriss Database&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_EVER_RX_OPIOID</span> <span class="o">!=</span> <span class="mi">999</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="calculate-assist-risk-levels">Calculate ASSIST Risk Levels<a class="headerlink" href="#calculate-assist-risk-levels" title="Permanent link">&para;</a></h4>
+<p>From their paper, Cochran et al., use the ASSIST prescription opioid risk subscale questionnaire to map subjects to their respective prescription opioid risk levels and remove subjects with incomplete questionnaire responses.</p>
+<div class="highlight"><pre><span></span><code><span class="n">assist_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_3MONTH_RX_OPIOID</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_DESIRE_RX_OPIOID</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_ISSUES_RX_OPIOID</span> <span class="o">+</span>
+                      <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_FAILED_RX_OPIOID</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_WORRY_RX_OPIOID</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_NO_CURB_RX_OPIOID</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_SCORE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">assist_score</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_SCORE</span> <span class="o">&lt;</span> <span class="mi">999</span><span class="p">]</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_LOW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_SCORE</span> <span class="o">&lt;=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_MEDIUM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="mi">4</span> <span class="o">&lt;=</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_SCORE</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_SCORE</span> <span class="o">&lt;=</span><span class="mi">26</span><span class="p">))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_HIGH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">27</span> <span class="o">&lt;=</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_SCORE</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;Number of subjects with ASSIST low risk: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_LOW&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span>
+<span class="s2">Number of subjects with ASSIST moderate risk: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_MEDIUM&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span>
+<span class="s2">Number of subjects with ASSIST high risk: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ASSIST_HIGH&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> &quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Number of subjects with ASSIST low risk: 772
+
+Number of subjects with ASSIST moderate risk: 623
+
+Number of subjects with ASSIST high risk: 33
+</code></pre>
+<h2 id="calculate-narcotic-score-risk-levels">Calculate Narcotic Score Risk Levels<a class="headerlink" href="#calculate-narcotic-score-risk-levels" title="Permanent link">&para;</a></h2>
+<p>Cochran et al. applied grid search cross validation to select the risk thresholds by finding the NS metrics that gave the lowest average misclassification rate when segmenting low vs. medium and high risk and high vs. low and medium risk. The threshold for high risk individuals was a score of 602 and for low risk individuals was 291.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NS_LOW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span> <span class="o">&lt;=</span><span class="mi">291</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;NS_MEDIUM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="mi">291</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span> <span class="o">&lt;</span><span class="mi">602</span><span class="p">))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;NS_HIGH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">602</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;Number of subjects with NS low risk: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NS_LOW&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span>
+<span class="s2">Number of subjects with NS moderate risk: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NS_MEDIUM&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span>
+<span class="s2">Number of subjects with NS high risk: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NS_HIGH&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> &quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Number of subjects with NS low risk: 733
+
+Number of subjects with NS moderate risk: 689
+
+Number of subjects with NS high risk: 6
+</code></pre>
+<h2 id="discriminating-validity-of-the-ns-metric">Discriminating Validity of the NS metric<a class="headerlink" href="#discriminating-validity-of-the-ns-metric" title="Permanent link">&para;</a></h2>
+<p>They applied receiver operating characteristic (ROC) analysis to the ability to seperate high and moderate risk subjects and moderate and low risk subjects on the ASSIST subscale for prescription opioids using the NS metric. This application demonstrated to be reasonably successful.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ns_metrics</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">y_high</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_HIGH</span>
+<span class="n">y_low</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">ASSIST_LOW</span>
+<span class="n">sensitivity_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns_metrics</span><span class="p">))</span>
+<span class="n">specificity_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns_metrics</span><span class="p">))</span>
+<span class="n">sensitivity_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns_metrics</span><span class="p">))</span>
+<span class="n">specificity_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns_metrics</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ns_metrics</span><span class="p">)):</span>
+    <span class="n">y_pred_high</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span> <span class="o">&gt;</span> <span class="n">ns_metrics</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">y_pred_low</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NARCOTICSCORE</span> <span class="o">&lt;=</span> <span class="n">ns_metrics</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="n">sensitivity_low</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y_low</span><span class="o">*</span><span class="n">y_pred_low</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_low</span><span class="o">*</span><span class="n">y_pred_low</span><span class="p">)</span><span class="o">+</span><span class="nb">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">y_low</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_low</span><span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="n">specificity_low</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_low</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_low</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">y_low</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_low</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="nb">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">y_low</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_low</span><span class="p">)))</span>
+
+    <span class="n">sensitivity_high</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y_high</span><span class="o">*</span><span class="n">y_pred_high</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_high</span><span class="o">*</span><span class="n">y_pred_high</span><span class="p">)</span><span class="o">+</span><span class="nb">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">y_high</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_high</span><span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="n">specificity_high</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_high</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_high</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">y_high</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_high</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="nb">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">y_high</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred_high</span><span class="p">)))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">specificity_high</span><span class="p">,</span> <span class="n">sensitivity_high</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">specificity_low</span><span class="p">,</span> <span class="n">sensitivity_low</span><span class="p">)</span>
+<span class="n">high_auc</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">specificity_high</span><span class="p">,</span> <span class="n">sensitivity_high</span><span class="p">)</span>
+<span class="n">low_auc</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">specificity_low</span><span class="p">,</span> <span class="n">sensitivity_low</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;Moderate-High Risk Determination </span><span class="se">\n</span><span class="s1"> AUC = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">high_auc</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+           <span class="sa">f</span><span class="s1">&#39;Low-Moderate Risk Determination </span><span class="se">\n</span><span class="s1"> AUC = </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">low_auc</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;ROC curve for Narcotic Score Discriminating High vs. </span><span class="se">\n</span><span class="s1"> Moderate risk and Moderate vs. Low risk Prescription Opioid Use&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/OpioidRiskMetric/figure1.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;img/OpioidRiskMetric/figure1.png&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../img/Opioid_Risk_Metric_Threshold_Identification/figure1.png" /></p>
+<h2 id="risk-threshold-scores">Risk Threshold Scores<a class="headerlink" href="#risk-threshold-scores" title="Permanent link">&para;</a></h2>
+<p>They next measured the agreement betwen the NS metric risk thresholds and the ASSIST score established risk thresholds using a confusion matrix below. Approximately 67.2% of the subjects were accurately mapped to the appropriate risk threshold using the NS metric, 17.0% of the participant classifications are false positives and the remaining 15.8% are false negatives.</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_LOW</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_LOW</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)),</span> <span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_MEDIUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_LOW</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)),</span> <span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_HIGH</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_LOW</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))),</span>
+         <span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_LOW</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_MEDIUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)),</span> <span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_MEDIUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_MEDIUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)),</span> <span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_HIGH</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_MEDIUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))),</span>
+         <span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_LOW</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_HIGH</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)),</span> <span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_MEDIUM</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_HIGH</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)),</span> <span class="nb">sum</span><span class="p">((</span><span class="n">df</span><span class="o">.</span><span class="n">ASSIST_HIGH</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">NS_HIGH</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))),</span> <span class="p">)))</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;ASSIT Low Risk&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;ASSIT Moderate Risk&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;ASSIT High Risk&#39;</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;NS Low Risk&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;NS Moderate Risk&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;NS High Risk&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; - &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;%&#39;</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">ASSIT Low Risk</th>
+<th align="left">ASSIT Moderate Risk</th>
+<th align="left">ASSIT High Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">NS Low Risk</td>
+<td align="left">532 - 37.3%</td>
+<td align="left">194 - 13.6%</td>
+<td align="left">7 - 0.5%</td>
+</tr>
+<tr>
+<td align="left">NS Moderate Risk</td>
+<td align="left">239 - 16.7%</td>
+<td align="left">426 - 29.8%</td>
+<td align="left">24 - 1.7%</td>
+</tr>
+<tr>
+<td align="left">NS High Risk</td>
+<td align="left">1 - 0.1%</td>
+<td align="left">3 - 0.2%</td>
+<td align="left">2 - 0.1%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="discussion-and-conclusions">Discussion And Conclusions<a class="headerlink" href="#discussion-and-conclusions" title="Permanent link">&para;</a></h2>
+<p>Cochran et al. argue that the accuracy of the NS metric in segmenting subjects by their opioid risk demonstrates that the NS metric is a fair screening tool for detecting risky prescription opioid use. Additionally, combining the number of correctly identified risk profiles with the number of subjects who have high opioid use but low reported risk (those subjects likely needing additional screening), the NS metric provides a meaningful level (86%) of clinically useful and actionable information. Cochran et al. argue that this high rate of accurate, clinically actionable insights would suggest that the NS metric may have an impactful role as a "universal screen" because of its high availability to community pharmacists and physicians and its relatively low barriers of use.</p>
+<p>They beleive that inn application, after pharmacists or clinicians receive a subject's NS metric, the pharmacists or clinicians may use the scores to triage subjects based on their respective risk profiles. If subjects are of moderate or high risk, as determined by their Narcotic Score, pharmacists may then use a decision support tool like the Prescription Drug Monitoring Clinical Decision Support Tool to assess which further risk assessment tools and patient recommendations to make.</p>
+<p>According to the paper, false positive misclassification is greatest among subjects with significant outlying factors to their pain management or prescription opioid use, such as disability or generally poor health. If the NS metric is applied in clinical practice, these false positive classifications would require further patient screening to rule out risks of opioid misuse and to allow pharmacists and clinicians to recommend additional pain management solutions.</p>
+<p>The study from Cochran et al. explains how the NS metric can be used as a universal screening tool for prescription opioid misuse risk by clinicians and pharmacists at the community level. In particular, the NS metric offers an easy-to-use format for identifying risky subject profiles with minimal effort required from either the subject or the pharmacist, and utilization of the NS metric is well positioned to inform decision-making by pharmacists and to compliment existing surveys for assessing subjects' risks of prescription opioid misuse.</p>
+<h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
+<h4 id="paper">Paper<a class="headerlink" href="#paper" title="Permanent link">&para;</a></h4>
+<p>Cochran G, Brown J, Yu Z, Frede S, Bryan MA, Ferguson A, Bayyari N, Taylor B, Snyder ME, Charron E, Adeoye-Olatunde OA, Ghitza UE, Winhusen T. Validation and threshold identification of a prescription drug monitoring program clinical opioid risk metric with the WHO alcohol, smoking, and substance involvement screening test. Drug Alcohol Depend. 2021 Nov 1;228:109067. doi: 10.1016/j.drugalcdep.2021.109067. Epub 2021 Sep 24. PMID: 34610516; PMCID: PMC8612015.</p>
+<h4 id="study">Study<a class="headerlink" href="#study" title="Permanent link">&para;</a></h4>
+<p>Cochran G, Winhusen T. Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool. NIDA-CTN-0093. https://datashare.nida.nih.gov/study/nida-ctn-0093</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Stigma-Reduction-Among_PCCs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Stigma Reduction Among PCCs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Stigma Reduction Among PCCs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQs" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              FAQs
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+    
+  </body>
+</html>
