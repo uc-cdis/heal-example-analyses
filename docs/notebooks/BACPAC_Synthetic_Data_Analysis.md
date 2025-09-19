@@ -36,6 +36,7 @@ import os
 
 plotly.offline.init_notebook_mode()
 from IPython.display import Markdown, Image, display
+os.makedirs('img/BACPAC_Synthetic_Data_Analysis')
 ```
 
 ## Query study metadata

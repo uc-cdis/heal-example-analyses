@@ -42,11 +42,13 @@ In their paper, Cochran et al. describe how the NS metric, composed of a collect
 !pip install scikit_learn -q
 import pandas as pd
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from sklearn import metrics
 from zipfile import ZipFile
 from IPython.display import Markdown, Image, display
+os.makedirs('img/Opioid_Risk_Metric_Threshold_Identification')
 ```
 
 #### Read Data
@@ -176,9 +178,9 @@ plt.legend([f'Moderate-High Risk Determination \n AUC = {round(high_auc, 2)}',
            f'Low-Moderate Risk Determination \n AUC = {round(low_auc, 2)}'])
 
 plt.title('ROC curve for Narcotic Score Discriminating High vs. \n Moderate risk and Moderate vs. Low risk Prescription Opioid Use')
-fig.savefig('img/OpioidRiskMetric/figure1.png')
+fig.savefig('img/Opioid_Risk_Metric_Threshold_Identification/figure1.png')
 plt.close()
-Image(filename='img/OpioidRiskMetric/figure1.png')
+Image(filename='img/Opioid_Risk_Metric_Threshold_Identification/figure1.png')
 ```
 
 
