@@ -16,4 +16,4 @@ hide:
 
 3. Can I share a notebook that my team has developed for analyzing data accessed through the HEAL Data Platform?
 
-    Yes! We encourage investigators (and their students & trainees!) to share materials they've developed through the secondary use of HEAL data. Whether it's replicating published results, combining data from multiple studies, or extending analyses, we would be glad to share those notebooks on the HEAL Data Platform and credit your team. If you have a notebook you'd like to share, please email us at [heal-support@gen3.org](heal-support@gen3.org).
+    Yes! We encourage investigators (and their students & trainees!) to share materials they've developed through the secondary use of HEAL data. Whether it's replicating published results, combining data from multiple studies, or extending analyses, we would be glad to share those notebooks on the HEAL Data Platform and credit your team. If you have a notebook you'd like to share, please email us at [heal-support@gen3.org](mailto:heal-support@gen3.org).
