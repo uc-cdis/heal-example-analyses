@@ -1,0 +1,1874 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://heal-docs-dev.io/notebooks/Monitoring_The_Future_12th_Grader_Opiate_Use_In_2019/">
+      
+      <link rel="icon" href="../../img/heal_logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>MTF 12th Grader Opiate Use In 2019 - HEAL Example Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monitoring-the-future-12th-grader-opiate-use-part-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-header__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEAL Example Analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MTF 12th Grader Opiate Use In 2019
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-nav__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    HEAL Example Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://healdata.org/" class="md-nav__link">
+        Return to Platform
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Example Analysis Notebooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Example Analysis Notebooks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Example Analysis Notebooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BACPAC_Synthetic_Data_Analysis/" class="md-nav__link">
+        BACPAC Synthetic Data Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Stigma-Reduction-Among_PCCs/" class="md-nav__link">
+        Stigma Reduction Among PCCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Opioid_Risk_Metric_Threshold_Identification-Study_Recreation/" class="md-nav__link">
+        Opioid Risk Metric Threshold Identification - Study Recreation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Opioid_Prevalence_And_Overdoses/" class="md-nav__link">
+        Opioid Prevalence And Overdoses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          MTF 12th Grader Opiate Use In 2019
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        MTF 12th Grader Opiate Use In 2019
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#j-m-maxwell-data-science-sr-analyst-ctds" class="md-nav__link">
+    J M Maxwell - Data Science, Sr. Analyst - CTDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-introduction" class="md-nav__link">
+    Analysis Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-the-data" class="md-nav__link">
+    About The Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-python-packages-and-data" class="md-nav__link">
+    Import Python Packages And Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-cleaning-and-feature-selection" class="md-nav__link">
+    Data Cleaning And Feature Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    Model Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-overview" class="md-nav__link">
+    Model Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-validation" class="md-nav__link">
+    Cross Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-class-imbalances" class="md-nav__link">
+    Resolving Class Imbalances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smote-cross-validation-pipeline" class="md-nav__link">
+    SMOTE Cross Validation Pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-cross-validation" class="md-nav__link">
+    Model Cross Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-classification-scores" class="md-nav__link">
+    Model Classification Scores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-selection_1" class="md-nav__link">
+    Model Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-analysis" class="md-nav__link">
+    Model Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lasso-logistic-regression-influential-variables" class="md-nav__link">
+    Lasso Logistic Regression Influential Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lasso-logistic-regression-least-influential-variables" class="md-nav__link">
+    Lasso Logistic Regression Least Influential Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-forest-influential-variables" class="md-nav__link">
+    Random Forest Influential Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-work" class="md-nav__link">
+    Future Work
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#j-m-maxwell-data-science-sr-analyst-ctds" class="md-nav__link">
+    J M Maxwell - Data Science, Sr. Analyst - CTDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-introduction" class="md-nav__link">
+    Analysis Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-the-data" class="md-nav__link">
+    About The Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-python-packages-and-data" class="md-nav__link">
+    Import Python Packages And Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-cleaning-and-feature-selection" class="md-nav__link">
+    Data Cleaning And Feature Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    Model Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-overview" class="md-nav__link">
+    Model Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-validation" class="md-nav__link">
+    Cross Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolving-class-imbalances" class="md-nav__link">
+    Resolving Class Imbalances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smote-cross-validation-pipeline" class="md-nav__link">
+    SMOTE Cross Validation Pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-cross-validation" class="md-nav__link">
+    Model Cross Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-classification-scores" class="md-nav__link">
+    Model Classification Scores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-selection_1" class="md-nav__link">
+    Model Selection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-analysis" class="md-nav__link">
+    Model Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lasso-logistic-regression-influential-variables" class="md-nav__link">
+    Lasso Logistic Regression Influential Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lasso-logistic-regression-least-influential-variables" class="md-nav__link">
+    Lasso Logistic Regression Least Influential Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-forest-influential-variables" class="md-nav__link">
+    Random Forest Influential Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-work" class="md-nav__link">
+    Future Work
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="monitoring-the-future-12th-grader-opiate-use-part-1">Monitoring The Future: 12th Grader Opiate Use - Part 1<a class="headerlink" href="#monitoring-the-future-12th-grader-opiate-use-part-1" title="Permanent link">&para;</a></h1>
+<h4 id="j-m-maxwell-data-science-sr-analyst-ctds">J M Maxwell - Data Science, Sr. Analyst - CTDS<a class="headerlink" href="#j-m-maxwell-data-science-sr-analyst-ctds" title="Permanent link">&para;</a></h4>
+<h2 id="analysis-introduction">Analysis Introduction<a class="headerlink" href="#analysis-introduction" title="Permanent link">&para;</a></h2>
+<h4 id="about-the-data">About The Data<a class="headerlink" href="#about-the-data" title="Permanent link">&para;</a></h4>
+<p>The <a href="https://monitoringthefuture.org">Monitoring The Future</a> surveys are a series of surveys that have emerged as a vital tool in measuring the values, behaviors, and lifestyle orientations among American youth. Through a comprehensive series of surveys, these studies offer a unique window into the ever-changing landscape of 12th grade students.</p>
+<p>Students are randomly assigned one of six questionnaires; each questionnaire comprises both a core set of questions common to all surveys and a set of questions tailored to the specific survey, collectively providing a rich dataset for exploration. There are approximately 1,400 variables across all of the questionnaires; while recognizing the vastness of the available data, our exploration will be primarily focused on a subset of variables deemed particularly relevant to our research objectives.</p>
+<p>One of the critical aspects examined in the surveys pertains to the frequency of drug use among students, encompassing a wide array of illicit and recreational substances. In the context of this analysis, specific attention has been limited to surveys which observe instances where students engaged in the use of heroin or other opioid narcotics.</p>
+<p>While the investigation of drug use patterns holds significance in understanding the landscape of contemporary American youth, the Monitoring The Future surveys provide a broader canvas for exploration. Our analysis encompasses an assortment of other captivating topics including, but not limited to, students' perspectives on religion, educational goals, family life dynamics, and work habits. By examining these multidimensional facets, we may gain a holistic understanding of the myriad factors influencing the lives, aspirations, and substance use risks of American youth.</p>
+<h4 id="import-python-packages-and-data">Import Python Packages And Data<a class="headerlink" href="#import-python-packages-and-data" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="o">-</span><span class="n">q</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="o">-</span><span class="n">q</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">imblearn</span> <span class="o">-</span><span class="n">q</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;future.no_silent_downcasting&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_validate</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">resample</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTE</span>
+<span class="kn">from</span> <span class="nn">imblearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+
+
+<span class="n">random_seed</span><span class="o">=</span><span class="mi">2023</span>
+
+<span class="n">df_12_2019_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Grade12/ICPSR_37841/DS0001/37841-0001-Data.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df_12_2019_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Grade12/ICPSR_37841/DS0003/37841-0003-Data.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="data-cleaning-and-feature-selection">Data Cleaning And Feature Selection<a class="headerlink" href="#data-cleaning-and-feature-selection" title="Permanent link">&para;</a></h4>
+<p>Below is a key for mapping the surveys' coded variable names to a more interpretable set of variable labels.</p>
+<p>We identified a number variables from the original dataset that needed to be removed because they were highly correlated. For instance, we observed among the survey recipients an unsurprising association between the number of alcoholic drinks consumed this year and the number of alcoholic drinks consumed in the last 30 days. We believe that the latter variable will serve as a more robust indicator for opiate use, so to streamline our analysis and enhance the veracity of our work, we made the decision to remove the former variable.</p>
+<p>The initial dataset comprises an impressive collection of 16,000+ survey results, each representing an observation from a survey participant. However, it is important to note that a substantial portion of these observations were removed during the data cleaning process, as those observations were missing portions of their data.</p>
+<p>Most of the data you see below is either recorded as a binary outcome (1/yes or 0/no), as an ordinal value(i.e., 0 = no drug use, 1 = some drug use, 2 = frequent drug use), or as a categorical feature. The categorical data is encoded and represented as binary data.</p>
+<div class="highlight"><pre><span></span><code><span class="n">variable_dict</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="s1">&#39;RESPONDENT_AGE&#39;</span><span class="p">:</span> <span class="s1">&#39;Over18&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V13&#39;</span><span class="p">:</span> <span class="s1">&#39;SchoolRegion&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V49&#39;</span><span class="p">:</span> <span class="s1">&#39;NumberOfSiblings&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2102&#39;</span><span class="p">:</span> <span class="s1">&#39;CigsSmoked/30Days&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2106&#39;</span><span class="p">:</span> <span class="s1">&#39;AlcoholicDrinksHowManyTimes/30Days&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2117&#39;</span><span class="p">:</span> <span class="s1">&#39;MarijuanaHowManyTimes/30Days&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2118&#39;</span><span class="p">:</span> <span class="s1">&#39;LSDHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2121&#39;</span><span class="p">:</span> <span class="s1">&#39;PsychedelicsHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2124&#39;</span><span class="p">:</span> <span class="s1">&#39;CocaineHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2127&#39;</span><span class="p">:</span> <span class="s1">&#39;AmphetaminesHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2133&#39;</span><span class="p">:</span> <span class="s1">&#39;SedativesHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2136&#39;</span><span class="p">:</span> <span class="s1">&#39;TranquilizersHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2139&#39;</span><span class="p">:</span> <span class="s1">&#39;HerHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2142&#39;</span><span class="p">:</span> <span class="s1">&#39;NarcHowManyTimes/Life&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2150&#39;</span><span class="p">:</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2151&#39;</span><span class="p">:</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2152&#39;</span><span class="p">:</span> <span class="s1">&#39;RaisedWhere&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2153&#39;</span><span class="p">:</span> <span class="s1">&#39;MaritalStatus&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2155&#39;</span><span class="p">:</span> <span class="s1">&#39;LivesWithFather&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2156&#39;</span><span class="p">:</span> <span class="s1">&#39;LivesWithMother&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2157&#39;</span><span class="p">:</span> <span class="s1">&#39;LivesWithSiblings&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2163&#39;</span><span class="p">:</span> <span class="s1">&#39;FatherEduLvl&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2164&#39;</span><span class="p">:</span> <span class="s1">&#39;MotherEduLvl&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2165&#39;</span><span class="p">:</span> <span class="s1">&#39;MotherHadPaidJobWhileGrowingUp&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2166&#39;</span><span class="p">:</span> <span class="s1">&#39;PoliticalPreference&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2167&#39;</span><span class="p">:</span> <span class="s1">&#39;PoliticalBeliefs&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2169&#39;</span><span class="p">:</span> <span class="s1">&#39;ReligiousServiceAttendenceWkly&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2170&#39;</span><span class="p">:</span> <span class="s1">&#39;ReligionImportance&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2172&#39;</span><span class="p">:</span> <span class="s1">&#39;HighSchoolProgram&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2174&#39;</span><span class="p">:</span> <span class="s1">&#39;SelfRateIntelligence&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2175&#39;</span><span class="p">:</span> <span class="s1">&#39;SchoolDaysMissedIllness/4Weeks&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2176&#39;</span><span class="p">:</span> <span class="s1">&#39;SchoolDaysMissedSkipped/4Weeks&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2177&#39;</span><span class="p">:</span> <span class="s1">&#39;SchoolDaysMissedOther/4Weeks&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2178&#39;</span><span class="p">:</span> <span class="s1">&#39;SkippedClass/4Weeks&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2179&#39;</span><span class="p">:</span> <span class="s1">&#39;AverageGradeHS&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2180&#39;</span><span class="p">:</span> <span class="s1">&#39;LikelyToAttendVocationalSchl&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2181&#39;</span><span class="p">:</span> <span class="s1">&#39;LikelyToServeInMilitary&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2182&#39;</span><span class="p">:</span> <span class="s1">&#39;LikelyToGraduate2YrCollege&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2183&#39;</span><span class="p">:</span> <span class="s1">&#39;LikelyToGraduate4YrCollege&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2184&#39;</span><span class="p">:</span> <span class="s1">&#39;LikelyToAttendGraduateSchl&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2185&#39;</span><span class="p">:</span> <span class="s1">&#39;WantToDoVocationalSchl&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2186&#39;</span><span class="p">:</span> <span class="s1">&#39;WantToServeInMilitary&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2187&#39;</span><span class="p">:</span> <span class="s1">&#39;WantToDo2YrCollege&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2188&#39;</span><span class="p">:</span> <span class="s1">&#39;WantToDo4YrCollege&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2189&#39;</span><span class="p">:</span> <span class="s1">&#39;WantToDoGradSchl&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2190&#39;</span><span class="p">:</span> <span class="s1">&#39;WantToDoNo2ndEd&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2191&#39;</span><span class="p">:</span> <span class="s1">&#39;HrsWorkedPerWeek&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2193&#39;</span><span class="p">:</span> <span class="s1">&#39;MoneyFromOtherSource&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2194&#39;</span><span class="p">:</span> <span class="s1">&#39;EveningsOutPerWeek&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2195&#39;</span><span class="p">:</span> <span class="s1">&#39;DatesHowOften&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2196&#39;</span><span class="p">:</span> <span class="s1">&#39;MilesDrivenPerWeek&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2197&#39;</span><span class="p">:</span> <span class="s1">&#39;DrivingTickets&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2201&#39;</span><span class="p">:</span> <span class="s1">&#39;CarAccidentsLast12Mo&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;V2459&#39;</span><span class="p">:</span> <span class="s1">&#39;CrackHowManyTimes/Life&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The folowing steps were taken to clean the data:</p>
+<p>1) We filtered the existing data by removing all variables missing more than 30% of their resepective values. We then remove all observations missing any survey responses.</p>
+<p>2) We combined the survey questions asking students how many times they have used heroin and how many times they used opioid narcotics in their life into a single variable marking whether they have ever used heroin or an opiate.</p>
+<p>3) We renamed all of our variables using the coded data dictionary above.</p>
+<p>4) We factored the categorical data so it can be represented numerically.</p>
+<p>5) We normalized the data so the ordinal and numerical outcomes do not have an oversized effect on our models.</p>
+<p>After these steps are complete we are left with only 5377 survey observations, approximately a third of our initial data.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Filter data down to just the variable dictionary, removing correlated features in the process</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">variable_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_12_2019_1</span><span class="p">[</span><span class="n">variables</span><span class="p">],</span><span class="n">df_12_2019_3</span><span class="p">[</span><span class="n">variables</span><span class="p">]],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Remove missing data</span>
+<span class="n">missing_criteria</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.3</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">missing_criteria</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">missing_criteria</span><span class="p">]]</span>
+
+<span class="n">df_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="o">.</span><span class="n">value_counts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">df_counts</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">missing_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">minimal_missing</span> <span class="o">=</span> <span class="n">missing_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">missing_data</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">minimal_missing</span><span class="p">)]</span>
+
+<span class="c1"># Combine Opiate Use data</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;OpiateUse&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;V2142&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;V2139&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;V2142&#39;</span><span class="p">,</span> <span class="s1">&#39;V2139&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Rename columns using data dictionary</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">variable_dict</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Factor categorical data</span>
+<span class="n">dummy_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SchoolRegion&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;RaisedWhere&#39;</span><span class="p">,</span> <span class="s1">&#39;MaritalStatus&#39;</span><span class="p">,</span> <span class="s1">&#39;PoliticalPreference&#39;</span><span class="p">,</span> <span class="s1">&#39;PoliticalBeliefs&#39;</span><span class="p">,</span> <span class="s1">&#39;HighSchoolProgram&#39;</span><span class="p">]</span>
+<span class="n">dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">dummy_cols</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">dummy_cols</span><span class="p">,</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">dummies</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dummy_cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Normalize data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="kc">False</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">-</span><span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="right">Over18</th>
+<th align="right">NumberOfSiblings</th>
+<th align="right">CigsSmoked/30Days</th>
+<th align="right">AlcoholicDrinksHowManyTimes/30Days</th>
+<th align="right">MarijuanaHowManyTimes/30Days</th>
+<th align="right">LSDHowManyTimes/Life</th>
+<th align="right">PsychedelicsHowManyTimes/Life</th>
+<th align="right">CocaineHowManyTimes/Life</th>
+<th align="right">AmphetaminesHowManyTimes/Life</th>
+<th align="right">SedativesHowManyTimes/Life</th>
+<th align="right">TranquilizersHowManyTimes/Life</th>
+<th align="right">Sex</th>
+<th align="right">LivesWithFather</th>
+<th align="right">LivesWithMother</th>
+<th align="right">LivesWithSiblings</th>
+<th align="right">FatherEduLvl</th>
+<th align="right">MotherEduLvl</th>
+<th align="right">MotherHadPaidJobWhileGrowingUp</th>
+<th align="right">ReligiousServiceAttendenceWkly</th>
+<th align="right">ReligionImportance</th>
+<th align="right">SelfRateIntelligence</th>
+<th align="right">SchoolDaysMissedIllness/4Weeks</th>
+<th align="right">SchoolDaysMissedSkipped/4Weeks</th>
+<th align="right">SchoolDaysMissedOther/4Weeks</th>
+<th align="right">SkippedClass/4Weeks</th>
+<th align="right">AverageGradeHS</th>
+<th align="right">LikelyToAttendVocationalSchl</th>
+<th align="right">LikelyToServeInMilitary</th>
+<th align="right">LikelyToGraduate2YrCollege</th>
+<th align="right">LikelyToGraduate4YrCollege</th>
+<th align="right">LikelyToAttendGraduateSchl</th>
+<th align="right">WantToDoVocationalSchl</th>
+<th align="right">WantToServeInMilitary</th>
+<th align="right">WantToDo2YrCollege</th>
+<th align="right">WantToDo4YrCollege</th>
+<th align="right">WantToDoGradSchl</th>
+<th align="right">WantToDoNo2ndEd</th>
+<th align="right">HrsWorkedPerWeek</th>
+<th align="right">MoneyFromOtherSource</th>
+<th align="right">EveningsOutPerWeek</th>
+<th align="right">DatesHowOften</th>
+<th align="right">MilesDrivenPerWeek</th>
+<th align="right">DrivingTickets</th>
+<th align="right">CarAccidentsLast12Mo</th>
+<th align="right">CrackHowManyTimes/Life</th>
+<th align="right">OpiateUse</th>
+<th align="right">SchoolRegion_2</th>
+<th align="right">SchoolRegion_3</th>
+<th align="right">Race_2</th>
+<th align="right">Race_3</th>
+<th align="right">RaisedWhere_1</th>
+<th align="right">RaisedWhere_2</th>
+<th align="right">RaisedWhere_3</th>
+<th align="right">RaisedWhere_4</th>
+<th align="right">RaisedWhere_5</th>
+<th align="right">RaisedWhere_6</th>
+<th align="right">RaisedWhere_7</th>
+<th align="right">RaisedWhere_8</th>
+<th align="right">RaisedWhere_9</th>
+<th align="right">MaritalStatus_2</th>
+<th align="right">MaritalStatus_3</th>
+<th align="right">MaritalStatus_4</th>
+<th align="right">PoliticalPreference_2</th>
+<th align="right">PoliticalPreference_3</th>
+<th align="right">PoliticalPreference_4</th>
+<th align="right">PoliticalPreference_5</th>
+<th align="right">PoliticalPreference_6</th>
+<th align="right">PoliticalPreference_7</th>
+<th align="right">PoliticalPreference_8</th>
+<th align="right">PoliticalBeliefs_2</th>
+<th align="right">PoliticalBeliefs_3</th>
+<th align="right">PoliticalBeliefs_4</th>
+<th align="right">PoliticalBeliefs_5</th>
+<th align="right">PoliticalBeliefs_6</th>
+<th align="right">PoliticalBeliefs_8</th>
+<th align="right">HighSchoolProgram_2</th>
+<th align="right">HighSchoolProgram_3</th>
+<th align="right">HighSchoolProgram_4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.166667</td>
+<td align="right">0.333333</td>
+<td align="right">1</td>
+<td align="right">0.666667</td>
+<td align="right">1</td>
+<td align="right">0.5</td>
+<td align="right">0.5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.875</td>
+<td align="right">0</td>
+<td align="right">0.333333</td>
+<td align="right">1</td>
+<td align="right">0.666667</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0.666667</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0.285714</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0.166667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.666667</td>
+<td align="right">0.166667</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0.714286</td>
+<td align="right">0</td>
+<td align="right">0.4</td>
+<td align="right">0</td>
+<td align="right">0.4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0.666667</td>
+<td align="right">0.666667</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0.666667</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.75</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.428571</td>
+<td align="right">0.444444</td>
+<td align="right">0.6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0.666667</td>
+<td align="right">1</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">0.875</td>
+<td align="right">0.333333</td>
+<td align="right">0</td>
+<td align="right">0.666667</td>
+<td align="right">1</td>
+<td align="right">0.666667</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0.6</td>
+<td align="right">0</td>
+<td align="right">0.4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="model-selection">Model Selection<a class="headerlink" href="#model-selection" title="Permanent link">&para;</a></h2>
+<p>We began our model selection stage by training five different machine learning models and comparing their performance. We then selected the two best performing models. The five initial models we trained were a simple logistic regression model, a lasso logistic regression model, a ridge logistic regression model, a support vector machine (SVM) classifier, and a random forest classifier.</p>
+<h4 id="model-overview">Model Overview<a class="headerlink" href="#model-overview" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">Logistic Regression Model</a>: A widely used technique for exploring relationships between predictor variables and the probability of a set of binary outcomes occuring.</p>
+</li>
+<li>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">Lasso Logistic Regression Model</a>: A variation of the logistic regression model that incorporates a component encouraging the model to minimize the number of predictor variables, helping us identify which predictor variables are most (and least) influential.</p>
+</li>
+<li>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">Ridge Logistic Regression Model</a>: Another variation of the logistic regression model that promotes a balanced selection of predictor variables, allowing us to more clearly compare the influence of different predictor variables on opiate use.</p>
+</li>
+<li>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html">Support Vector Machine (SVM) Classifier</a>: a classification model specificly suited to uncover complex boundaries to distinguish between classes of opiate users and non-users.</p>
+</li>
+<li>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html">Random Forest Classifier</a>: Utilizes the collective descision making power of an ensemble of smaller, simpler models (decison trees) to produce more robust insights on the factors associated with opiate use in students.</p>
+</li>
+</ul>
+<h4 id="cross-validation"><a href="https://scikit-learn.org/stable/modules/cross_validation.html">Cross Validation</a><a class="headerlink" href="#cross-validation" title="Permanent link">&para;</a></h4>
+<p>In order to make a precise comparison between these five models, we need to utilize cross-validation. Cross-validation involves executing multiple iterations of training and testing a model on various random, resampled selections of the data. This method is primarily used to estimate how a predictive model will perform in practice. In our use case, we compared the performance of our five models during cross-validation to determine which models perform best.</p>
+<h4 id="resolving-class-imbalances">Resolving Class Imbalances<a class="headerlink" href="#resolving-class-imbalances" title="Permanent link">&para;</a></h4>
+<p>As expected, a limited number of the students surveyed had ever used opiates. Only 295 of the 5377 (approx. 5.5%) students had ever used opiates or heroin recreationally. This imbalance in classes made it very difficult to train a model to predict occurances of the minority class (opiate use) accurately. To resolve this problem, we used a technique called <a href="https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html">Synthetic Minority Oversampling Technique (SMOTE)</a>. SMOTE synthesizes new examples from the minority class by creating synthetic data points which only slightly differ from the original data points of the minority class.</p>
+<h4 id="smote-cross-validation-pipeline">SMOTE Cross Validation Pipeline<a class="headerlink" href="#smote-cross-validation-pipeline" title="Permanent link">&para;</a></h4>
+<p>Below you will find the function for a pipeline for performing model training and testing using 10-fold cross validation and SMOTE and for recording each model's cross validated performace.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pipeline_cross_validation</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">pipeline_steps</span><span class="p">):</span>
+
+    <span class="n">folds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="n">accuracySum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">recallSum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">precisionSum</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+        <span class="n">train</span> <span class="o">=</span> <span class="n">folds</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="n">folds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">del</span> <span class="n">train</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">OpiateUse</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;OpiateUse&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">y_test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">OpiateUse</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">X_test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;OpiateUse&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">pipeline_steps</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+        <span class="n">accuracySum</span> <span class="o">+=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">recallSum</span> <span class="o">+=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">precisionSum</span> <span class="o">+=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">accuracySum</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">recallSum</span><span class="o">/</span><span class="n">k</span><span class="p">,</span> <span class="n">precisionSum</span><span class="o">/</span><span class="n">k</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="model-cross-validation">Model Cross Validation<a class="headerlink" href="#model-cross-validation" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))]</span>
+<span class="n">classification_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Metric&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;Recall&#39;</span><span class="p">,</span> <span class="s1">&#39;Precision&#39;</span><span class="p">]})</span>
+<span class="n">smt</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">random_seed</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Logistic Regression&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeline_cross_validation</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;l1&#39;</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Lasso Logistic Regression&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeline_cross_validation</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;l2&#39;</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Ridge Logistic Regression&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeline_cross_validation</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Support Vector Machine&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeline_cross_validation</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Random Forest Classifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeline_cross_validation</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="model-classification-scores">Model Classification Scores<a class="headerlink" href="#model-classification-scores" title="Permanent link">&para;</a></h4>
+<p>Below we find the model accuracy, recall, and precision scores for all five models. All three metrics are scored between 0.0 and 1.0, with 1.0 being a perfect score. In our current application, model accuracy is a measurement of how well the model correctly labels whether a student is likely to either have used opiates/heroin or to not have used opiates/heroin. Recall measures how well the model performs at detecting all of the subjects who have used opiates/heroin. Precision measures how well the model performs at accurately specifying which subjects have used opiates/heroin from those subjects who have not used opiates/heroin.</p>
+<p>While we resolved the class imbalance when training our models, the class imbalance can still effect our scores, particularly model accuracy during testing. With that in mind, we primarily relied on the recall and precision scores when comparing the performance of the models and selecting our final two models.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Markdown</span><span class="p">(</span><span class="n">classification_scores</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Metric</th>
+<th align="right">Logistic Regression</th>
+<th align="right">Lasso Logistic Regression</th>
+<th align="right">Ridge Logistic Regression</th>
+<th align="right">Support Vector Machine</th>
+<th align="right">Random Forest Classifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">Accuracy</td>
+<td align="right">0.863121</td>
+<td align="right">0.866843</td>
+<td align="right">0.863121</td>
+<td align="right">0.961129</td>
+<td align="right">0.967452</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Recall</td>
+<td align="right">0.704792</td>
+<td align="right">0.703083</td>
+<td align="right">0.704792</td>
+<td align="right">0.524306</td>
+<td align="right">0.515776</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Precision</td>
+<td align="right">0.244013</td>
+<td align="right">0.250618</td>
+<td align="right">0.244013</td>
+<td align="right">0.699461</td>
+<td align="right">0.80553</td>
+</tr>
+</tbody>
+</table>
+<h4 id="model-selection_1">Model Selection<a class="headerlink" href="#model-selection_1" title="Permanent link">&para;</a></h4>
+<p>We chose one model with the highest recall score and one with the highest precision score. The random forest classifier clearly had the best precison score. The three logistic regression models all had very similar recall scores, however, we chose the lasso logistic regression model from those three models. The lasso logistic regression model will typically be more interpretable and simpler by reducing the number of variables.</p>
+<p>We proceeded with retraining the random forest classifier and lasso logistic regression models so we could examine what each model believes to be the most influential variables on whether a 12th grader has ever used opiates/heroin.</p>
+<h2 id="model-analysis">Model Analysis<a class="headerlink" href="#model-analysis" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;OpiateUse&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">OpiateUse</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_seed</span><span class="p">)</span>
+<span class="n">classification_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Metric&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">,</span> <span class="s1">&#39;Recall&#39;</span><span class="p">,</span> <span class="s1">&#39;Precision&#39;</span><span class="p">]})</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s1">&#39;entropy&#39;</span><span class="p">,</span> <span class="n">bootstrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">feature_importance</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;RF Feature Importance&#39;</span><span class="p">:</span> <span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;OpiateUse&#39;</span><span class="p">))</span>
+<span class="n">feature_importance</span><span class="p">[</span><span class="s1">&#39;Normalized RF Feature Importance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">feature_importances_</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">feature_importances_</span><span class="p">))</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Random Forest Classifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>  <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;l1&#39;</span><span class="p">)</span>
+<span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;smt&#39;</span><span class="p">,</span> <span class="n">smt</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)]</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">feature_importance</span><span class="p">[</span><span class="s1">&#39;Lasso Model Coefficients&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">feature_importance</span><span class="p">[</span><span class="s1">&#39;Lasso Model Coefficients AbsVal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pipeline</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">classification_scores</span><span class="p">[</span><span class="s1">&#39;Lasso Logistic Regression&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span>  <span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)]</span>
+</code></pre></div>
+<p>Again we see similar recall and precision scores as before.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Markdown</span><span class="p">(</span><span class="n">classification_scores</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Metric</th>
+<th align="right">Random Forest Classifier</th>
+<th align="right">Lasso Logistic Regression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">Accuracy</td>
+<td align="right">0.958178</td>
+<td align="right">0.859665</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Recall</td>
+<td align="right">0.476923</td>
+<td align="right">0.753846</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Precision</td>
+<td align="right">0.738095</td>
+<td align="right">0.266304</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lasso-logistic-regression-influential-variables">Lasso Logistic Regression Influential Variables<a class="headerlink" href="#lasso-logistic-regression-influential-variables" title="Permanent link">&para;</a></h4>
+<p>We first looked at the most influential variables in the lasso logistic regression model. Below are a rank ordered list of the 15 most influential variables. Because the lasso logistic regression model's coefficients are related to a high recall score, they let us know which of the variables are the most influential on the model's ability to identify all of the students who have used opiates/heroin. This particular model was able to identify between 70% and 75% of all the surveyed students who had used opiates/heroin.</p>
+<p>In the data frame below, 'Lasso Model Coefficients' is the coefficient in the model and tells us the relative influence of each of the 10 variables with the greatest positive influence towards identifying students who used opiates. For instance, the frequency of with which students use tranquilizers or LSD (the two highest ranked variables) are highly influential in identifying students who have ever used opiates. Furthermore, 8 of top 10 variables that are highly related to student's opiate use involve the student's illicit use of other drugs or alcohol.</p>
+<p>When comparing the influence of each variable in our model, it is important to note the relative scale of the model coefficients. For instance, each use of amphetamines or cocaine in a students lifetime is approximately 3 times more influential to our model's prediction of opiate use than each use of marijuana or sedatives/barbituates.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Markdown</span><span class="p">(</span><span class="n">feature_importance</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Lasso Model Coefficients&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[[</span><span class="s1">&#39;Lasso Model Coefficients&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Lasso Model Coefficients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">TranquilizersHowManyTimes/Life</td>
+<td align="right">7.3497</td>
+</tr>
+<tr>
+<td align="left">LSDHowManyTimes/Life</td>
+<td align="right">6.9445</td>
+</tr>
+<tr>
+<td align="left">CocaineHowManyTimes/Life</td>
+<td align="right">4.26338</td>
+</tr>
+<tr>
+<td align="left">AmphetaminesHowManyTimes/Life</td>
+<td align="right">4.14465</td>
+</tr>
+<tr>
+<td align="left">CigsSmoked/30Days</td>
+<td align="right">2.13381</td>
+</tr>
+<tr>
+<td align="left">AlcoholicDrinksHowManyTimes/30Days</td>
+<td align="right">1.69848</td>
+</tr>
+<tr>
+<td align="left">MarijuanaHowManyTimes/30Days</td>
+<td align="right">1.54761</td>
+</tr>
+<tr>
+<td align="left">SedativesHowManyTimes/Life</td>
+<td align="right">1.22001</td>
+</tr>
+<tr>
+<td align="left">LivesWithFather</td>
+<td align="right">0.978733</td>
+</tr>
+<tr>
+<td align="left">MotherHadPaidJobWhileGrowingUp</td>
+<td align="right">0.821343</td>
+</tr>
+<tr>
+<td align="left">WantToServeInMilitary</td>
+<td align="right">0.697732</td>
+</tr>
+<tr>
+<td align="left">AverageGradeHS</td>
+<td align="right">0.606838</td>
+</tr>
+<tr>
+<td align="left">LikelyToAttendVocationalSchl</td>
+<td align="right">0.595602</td>
+</tr>
+<tr>
+<td align="left">LikelyToAttendGraduateSchl</td>
+<td align="right">0.466966</td>
+</tr>
+<tr>
+<td align="left">MotherEduLvl</td>
+<td align="right">0.348325</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lasso-logistic-regression-least-influential-variables">Lasso Logistic Regression Least Influential Variables<a class="headerlink" href="#lasso-logistic-regression-least-influential-variables" title="Permanent link">&para;</a></h4>
+<p>According to our lasso logistic regression model, these are the 10 least influential variables on whether a survey subject was likely or unlikely to use opiates/heroin. These attributes give little to no indication into whether a student will have illicitly used opiates or heroin.  These variables are listed in order of least influence.
+The relevant encodings on this list are:</p>
+<ul>
+<li>'PoliticalBeliefs_6' - Radical (ranked 1-6 from very conservative to radically liberal, with option for no belief)</li>
+<li>'PoliticalBeliefs_3' - Moderate (ranked 1-6 from very conservative to radically liberal, with option for no belief)</li>
+<li>'Race_3' - Hispanic (subjects self reported race as Black, White, or Hispanic)</li>
+</ul>
+<p>From our model, it appears that some student's political beliefs, the number of times the student has skipped class in the last four weeks, a lack of desire to pursure secondary education, and the number of psychedelics they have consumed in their lifetime all provide little to no information as to whether a student would or would not use opiates/heroin.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Markdown</span><span class="p">(</span><span class="n">feature_importance</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Lasso Model Coefficients AbsVal&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)[[</span><span class="s1">&#39;Lasso Model Coefficients AbsVal&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Lasso Model Coefficients AbsVal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">PsychedelicsHowManyTimes/Life</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">SkippedClass/4Weeks</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">WantToDoNo2ndEd</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PoliticalBeliefs_3</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">PoliticalBeliefs_6</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">Race_3</td>
+<td align="right">0.0410165</td>
+</tr>
+<tr>
+<td align="left">DatesHowOften</td>
+<td align="right">0.0453305</td>
+</tr>
+<tr>
+<td align="left">LikelyToServeInMilitary</td>
+<td align="right">0.0460795</td>
+</tr>
+<tr>
+<td align="left">NumberOfSiblings</td>
+<td align="right">0.0713443</td>
+</tr>
+<tr>
+<td align="left">ReligiousServiceAttendenceWkly</td>
+<td align="right">0.0808742</td>
+</tr>
+</tbody>
+</table>
+<h4 id="random-forest-influential-variables">Random Forest Influential Variables<a class="headerlink" href="#random-forest-influential-variables" title="Permanent link">&para;</a></h4>
+<p>Now, let's analyze the key attributes of the random forest classification model. Presented below is a ranked list of the top 15 most important variables to our random forest model. These variables play a crucial role in achieving a high precision score and provide insights into the most influential factors affecting the model's capability to accurately distinguish and identify students who have used opiates/heroin (it is highly unlikely that the model will indicate that student who has never used opiates/heroin as having used opiates/heroin at least once in their life).</p>
+<p>In the data frame below, 'RF Feature Importance' is the Gini Feature Importance of the random forest model and 'Normalized RF Feature Importance' is the the same set of values normalized to a range between 0 and 1. As with our lasso logistic regression model, a variety of other drug and alcohol use is highly influential on whether a subject is likely to have or have not used opiates/heroin. Other important features include how often the subject goes out on dates, the self reported importance of religion and attendence to religious services, the number school days they have missed in the last four weeks, how many hours they work each week, and whether the subject's mother had a paid job growing up. Unlike the coefficients of our ridge logistic regression model above, these scores do not tell us whether a particular variable has a strong postive or negative influence on predicting whether a student has or has not used opiates/heroin.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Markdown</span><span class="p">(</span><span class="n">feature_importance</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RF Feature Importance&#39;</span><span class="p">],</span>
+                               <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[[</span><span class="s1">&#39;RF Feature Importance&#39;</span><span class="p">,</span> <span class="s1">&#39;Normalized RF Feature Importance&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">RF Feature Importance</th>
+<th align="right">Normalized RF Feature Importance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">TranquilizersHowManyTimes/Life</td>
+<td align="right">0.104334</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">AmphetaminesHowManyTimes/Life</td>
+<td align="right">0.0943735</td>
+<td align="right">0.90435</td>
+</tr>
+<tr>
+<td align="left">AlcoholicDrinksHowManyTimes/30Days</td>
+<td align="right">0.0748839</td>
+<td align="right">0.717192</td>
+</tr>
+<tr>
+<td align="left">MarijuanaHowManyTimes/30Days</td>
+<td align="right">0.0633785</td>
+<td align="right">0.606706</td>
+</tr>
+<tr>
+<td align="left">LSDHowManyTimes/Life</td>
+<td align="right">0.0550314</td>
+<td align="right">0.526549</td>
+</tr>
+<tr>
+<td align="left">SedativesHowManyTimes/Life</td>
+<td align="right">0.0350997</td>
+<td align="right">0.335146</td>
+</tr>
+<tr>
+<td align="left">CocaineHowManyTimes/Life</td>
+<td align="right">0.0254969</td>
+<td align="right">0.242931</td>
+</tr>
+<tr>
+<td align="left">CigsSmoked/30Days</td>
+<td align="right">0.0233875</td>
+<td align="right">0.222674</td>
+</tr>
+<tr>
+<td align="left">ReligionImportance</td>
+<td align="right">0.0198766</td>
+<td align="right">0.188959</td>
+</tr>
+<tr>
+<td align="left">SchoolDaysMissedSkipped/4Weeks</td>
+<td align="right">0.0195713</td>
+<td align="right">0.186027</td>
+</tr>
+<tr>
+<td align="left">PsychedelicsHowManyTimes/Life</td>
+<td align="right">0.0194071</td>
+<td align="right">0.18445</td>
+</tr>
+<tr>
+<td align="left">HrsWorkedPerWeek</td>
+<td align="right">0.0192343</td>
+<td align="right">0.182791</td>
+</tr>
+<tr>
+<td align="left">FatherEduLvl</td>
+<td align="right">0.0183928</td>
+<td align="right">0.174711</td>
+</tr>
+<tr>
+<td align="left">MotherHadPaidJobWhileGrowingUp</td>
+<td align="right">0.0183627</td>
+<td align="right">0.174421</td>
+</tr>
+<tr>
+<td align="left">LikelyToAttendVocationalSchl</td>
+<td align="right">0.018341</td>
+<td align="right">0.174213</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
+<p>By employing SMOTE and cross-validation techniques, we successfully identified the random forest classifier and lasso logistic regression model as two effective models for accurately predicting the likelihood of survey subjects having used opiates or heroin during their 12th grade year. Using these models, we evaluated the influential variables that impacted our predictions.</p>
+<p>Many of the identified important variables aligned with expectations. It was not surprising to find that students who engaged in various illicit drug use and underage drinking were at higher risk of using opiates and heroin. Additionally, we discovered that a number of factors such as the student's desire to pursue secondary education or the freuency of skipping class had a minimal impact on the lasso logistic regression model's outcomes. This suggests that these variables may not be significant predictors of opiate/heroin usage according to the model.</p>
+<h2 id="future-work">Future Work<a class="headerlink" href="#future-work" title="Permanent link">&para;</a></h2>
+<p>Future work is planned in order to incorporate the ICPSR <em>Monitoring the Future</em> data for years outside of 2019. We would like to analyze the survey results from years prior to the COVID-19 pandemic in comparison to survey results during the pandemic in order to examine how 12th grader opiate use and the factors influencing their opiate use have changed over time.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Opioid_Prevalence_And_Overdoses/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Opioid Prevalence And Overdoses" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Opioid Prevalence And Overdoses
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQs" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              FAQs
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+    
+  </body>
+</html>
