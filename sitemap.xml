@@ -2,42 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://heal-docs-dev.io/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/contact/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/faq/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/notebooks/BACPAC_Synthetic_Data_Analysis/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heal-docs-dev.io/notebooks/High-Resolution-Spinal-Cord-Stimulation-for-Non-Opioid-Treatment-of-Neuropathic-Pain/</loc>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heal-docs-dev.io/notebooks/Monitoring_The_Future_12th_Grader_Opiate_Use_2012-2021/</loc>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/notebooks/Monitoring_The_Future_12th_Grader_Opiate_Use_In_2019/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/notebooks/Opioid_Prevalence_And_Overdoses/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/notebooks/Opioid_Risk_Metric_Threshold_Identification-Study_Recreation/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://heal-docs-dev.io/notebooks/Stigma-Reduction-Among_PCCs/</loc>
-         <lastmod>2025-09-26</lastmod>
+         <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

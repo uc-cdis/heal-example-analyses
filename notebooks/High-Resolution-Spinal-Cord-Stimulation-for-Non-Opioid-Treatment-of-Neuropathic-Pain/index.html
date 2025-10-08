@@ -1,0 +1,1575 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://heal-docs-dev.io/notebooks/High-Resolution-Spinal-Cord-Stimulation-for-Non-Opioid-Treatment-of-Neuropathic-Pain/">
+      
+      <link rel="icon" href="../../img/heal_logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>Non-Opioid Treatment Of Neuropathic Pain - HEAL Example Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="heal_platform" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analysis-of-a-non-opioid-treatment-for-neuropathic-pain-hdp00384" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-header__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HEAL Example Analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Non-Opioid Treatment Of Neuropathic Pain
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://healdata.org" title="HEAL Example Analysis" class="md-nav__button md-logo" aria-label="HEAL Example Analysis" data-md-component="logo">
+      
+  <img src="../../assets/HEAL_Initiative_White-cropped.svg" alt="logo">
+
+    </a>
+    HEAL Example Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://healdata.org/" class="md-nav__link">
+        Return to Platform
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Example Analysis Notebooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Example Analysis Notebooks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Example Analysis Notebooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BACPAC_Synthetic_Data_Analysis/" class="md-nav__link">
+        BACPAC Synthetic Data Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Stigma-Reduction-Among_PCCs/" class="md-nav__link">
+        Stigma Reduction Among PCCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Opioid_Risk_Metric_Threshold_Identification-Study_Recreation/" class="md-nav__link">
+        Opioid Risk Metric Threshold Identification - Study Recreation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Opioid_Prevalence_And_Overdoses/" class="md-nav__link">
+        Opioid Prevalence And Overdoses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Non-Opioid Treatment Of Neuropathic Pain
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Non-Opioid Treatment Of Neuropathic Pain
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-j-m-maxwell-data-science-sr-analyst-ctds" class="md-nav__link">
+    By J M Maxwell - Data Science, Sr. Analyst - CTDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-data" class="md-nav__link">
+    Access Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-study" class="md-nav__link">
+    About the Study
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Study">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-packages-and-data" class="md-nav__link">
+    Load Packages and Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-in-data-and-clean-data" class="md-nav__link">
+    Read In Data and Clean Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-statistics" class="md-nav__link">
+    Summary Statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-testing" class="md-nav__link">
+    Statistical Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Statistical Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#students-t-test" class="md-nav__link">
+    Student's T-Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxon-signed-rank-test" class="md-nav__link">
+    Wilcoxon Signed-Rank Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Monitoring_The_Future_12th_Grader_Opiate_Use_In_2019/" class="md-nav__link">
+        MTF 12th Grader Opiate Use In 2019
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Monitoring_The_Future_12th_Grader_Opiate_Use_2012-2021/" class="md-nav__link">
+        MTF 12th Grader Opiate Use In 2012-2021
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#by-j-m-maxwell-data-science-sr-analyst-ctds" class="md-nav__link">
+    By J M Maxwell - Data Science, Sr. Analyst - CTDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-data" class="md-nav__link">
+    Access Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-study" class="md-nav__link">
+    About the Study
+  </a>
+  
+    <nav class="md-nav" aria-label="About the Study">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-packages-and-data" class="md-nav__link">
+    Load Packages and Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-in-data-and-clean-data" class="md-nav__link">
+    Read In Data and Clean Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-statistics" class="md-nav__link">
+    Summary Statistics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistical-testing" class="md-nav__link">
+    Statistical Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Statistical Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#students-t-test" class="md-nav__link">
+    Student's T-Test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wilcoxon-signed-rank-test" class="md-nav__link">
+    Wilcoxon Signed-Rank Test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="analysis-of-a-non-opioid-treatment-for-neuropathic-pain-hdp00384">Analysis Of A Non-Opioid Treatment For Neuropathic Pain (HDP00384)<a class="headerlink" href="#analysis-of-a-non-opioid-treatment-for-neuropathic-pain-hdp00384" title="Permanent link">&para;</a></h1>
+<h4 id="by-j-m-maxwell-data-science-sr-analyst-ctds">By J M Maxwell - Data Science, Sr. Analyst - CTDS<a class="headerlink" href="#by-j-m-maxwell-data-science-sr-analyst-ctds" title="Permanent link">&para;</a></h4>
+<p>In this notebook, we'll be analyzing data from the study <a href="https://data.mendeley.com/datasets/rmj2kngzbp/1"><em>High-Resolution, Spinal Cord Stimulation for Non-Opioid Treatment of Neuropathic Pain</em></a> by Bryan McLaughlin. The study was conducted in two phases, and this analysis utilizes the pre and post operation results from five indices for the subject's self reported pain, depression, or pain inducing disability.</p>
+<p>This work was strictly done to demonstrate the advantages of the HEAL Platform's Workspace feature and the ability to utilize data that is joined under the HEAL data mesh. All the following work was completed by J M. Maxwell and members of the HEAL Platform team, but was based on the data provided in <a href="https://data.mendeley.com/datasets/rmj2kngzbp/1"><em>High-Resolution, Spinal Cord Stimulation for Non-Opioid Treatment of Neuropathic Pain</em></a> and influenced by the work of McLaughlin et al. in <a href="https://pubmed.ncbi.nlm.nih.gov/39320285/"><em>Correlating Evoked Electromyography and Anatomic Factors During Spinal Cord Stimulation Implantation With Short-Term Outcomes</em></a>.</p>
+<p>The work here does not represent the official opinions, recommendations, or conclusions of Bryan McLaughlin and this work does not represent policy or medical recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.</p>
+<pre><code>McLaughlin, Bryan (2024), “High-Resolution, Spinal Cord Stimulation for Non-Opioid Treatment of Neuropathic Pain (U44NS115111)”, Mendeley Data, V1, doi: 10.17632/rmj2kngzbp.1
+</code></pre>
+<h2 id="access-data">Access Data<a class="headerlink" href="#access-data" title="Permanent link">&para;</a></h2>
+<p>To access the data from this study make sure you are logged in to the InCommon login option and then:
+1) Go to the HEAL Discovery page to select the study
+2) Select the 'Open In Workspace' option and choose the (Tutorials) Example Analysis Jupyter Lab Notebooks workspace option
+3) Use the exported study manifest to download the study.</p>
+<p>Otherwise you may run the following gen3-sdk command to download the relevant CSV file from the study.</p>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">gen3</span> <span class="n">drs</span><span class="o">-</span><span class="n">pull</span> <span class="nb">object</span> <span class="n">dg</span><span class="o">.</span><span class="n">H34L</span><span class="o">/</span><span class="n">b8b871b8</span><span class="o">-</span><span class="n">aadd</span><span class="o">-</span><span class="mi">4017</span><span class="o">-</span><span class="mi">9</span><span class="n">f67</span><span class="o">-</span><span class="mi">184</span><span class="n">b17ab3580</span>
+<span class="err">!</span><span class="n">gen3</span> <span class="n">drs</span><span class="o">-</span><span class="n">pull</span> <span class="nb">object</span> <span class="n">dg</span><span class="o">.</span><span class="n">H34L</span><span class="o">/</span><span class="n">ffde8647</span><span class="o">-</span><span class="mi">1</span><span class="n">ec2</span><span class="o">-</span><span class="mi">4459</span><span class="o">-</span><span class="mi">8409</span><span class="o">-</span><span class="n">bd41c0736c86</span>
+</code></pre></div>
+<pre><code>{"succeeded": ["dg.H34L/b8b871b8-aadd-4017-9f67-184b17ab3580"], "failed": []}
+{"succeeded": ["dg.H34L/ffde8647-1ec2-4459-8409-bd41c0736c86"], "failed": []}
+</code></pre>
+<h2 id="about-the-study">About the Study<a class="headerlink" href="#about-the-study" title="Permanent link">&para;</a></h2>
+<p>The study, <em>High-Resolution, Spinal Cord Stimulation for Non-Opioid Treatment of Neuropathic Pain</em>, investigated the outcomes of elliciting EMGs (electromyography) in subject's regions of pain during surgery. Data for evaluating the treatment effect were collected from 21 patients in two phases. Subject outcomes were measured using: the Numerical Rating Scale, McGill Pain Questionnaire, Beck Depression Inventory, Oswestry Disability Index, and Pain Catastrophizing Score, and were recorded preoperatively and at three months following the procedure.</p>
+<h3 id="load-packages-and-data">Load Packages and Data<a class="headerlink" href="#load-packages-and-data" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="o">-</span><span class="n">q</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span> <span class="k">as</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;max_colwidth&#39;</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;img/Non-Opioid_Treatment_Analysis&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="read-in-data-and-clean-data">Read In Data and Clean Data<a class="headerlink" href="#read-in-data-and-clean-data" title="Permanent link">&para;</a></h3>
+<p>After reading in the data, we perform standard data cleaning steps to improve the usability of the data, remove extraneous data features, and engineer new features measuring the percent change in treatment effects from before and after the each sample subject's operation.</p>
+<div class="highlight"><pre><span></span><code><span class="n">participants_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Microleads - Participant level data.xlsx&#39;</span><span class="p">)</span>
+<span class="n">pain_scores_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Pain-MRI scores.xlsx&#39;</span><span class="p">)</span>
+<span class="n">pain_scores_df</span> <span class="o">=</span> <span class="n">pain_scores_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">21</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="n">participants_df</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">pain_scores_df</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Phase&#39;</span><span class="p">,</span> <span class="s1">&#39;Patient&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">))]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;float64&#39;</span><span class="p">))]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;NRS Pre-op&#39;</span><span class="p">:</span> <span class="s1">&#39;NRS Pre-Op&#39;</span><span class="p">,</span> <span class="s1">&#39;NRS Post-op&#39;</span><span class="p">:</span> <span class="s1">&#39;NRS Post-Op&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ pre-op&#39;</span><span class="p">:</span> <span class="s1">&#39;MPQ Pre-Op&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ post-op&#39;</span><span class="p">:</span> <span class="s1">&#39;MPQ Post-Op&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">:</span> <span class="s1">&#39;Sex&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethnicity&#39;</span><span class="p">,</span> <span class="s1">&#39;Age Unit&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">delta_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NRS&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ&#39;</span><span class="p">,</span> <span class="s1">&#39;ODI&#39;</span><span class="p">,</span> <span class="s1">&#39;PCS&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">delta_cols</span><span class="p">:</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">_pct_change&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Post-Op&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Pre-Op&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Post-Op&#39;</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">Markdown</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="right">Phase</th>
+<th align="left">Sex</th>
+<th align="right">Age</th>
+<th align="right">NRS Pre-Op</th>
+<th align="right">NRS Post-Op</th>
+<th align="right">MPQ Pre-Op</th>
+<th align="right">MPQ Post-Op</th>
+<th align="right">ODI Pre-Op</th>
+<th align="right">ODI Post-Op</th>
+<th align="right">PCS Pre-Op</th>
+<th align="right">PCS Post-Op</th>
+<th align="right">BDI Pre-Op</th>
+<th align="right">BDI Post-Op</th>
+<th align="right">AP column Diameter (mm)</th>
+<th align="right">Interpedicular distance (mm)</th>
+<th align="right">Dorsal CSF Thickness (mm)</th>
+<th align="right">NRS_pct_change</th>
+<th align="right">MPQ_pct_change</th>
+<th align="right">ODI_pct_change</th>
+<th align="right">PCS_pct_change</th>
+<th align="right">BDI_pct_change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">54</td>
+<td align="right">9</td>
+<td align="right">4</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">68</td>
+<td align="right">44</td>
+<td align="right">14</td>
+<td align="right">7</td>
+<td align="right">10</td>
+<td align="right">5</td>
+<td align="right">12.8</td>
+<td align="right">16.5</td>
+<td align="right">3</td>
+<td align="right">-125</td>
+<td align="right">0</td>
+<td align="right">-54.55</td>
+<td align="right">-100</td>
+<td align="right">-100</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">M</td>
+<td align="right">60</td>
+<td align="right">9</td>
+<td align="right">5</td>
+<td align="right">8</td>
+<td align="right">7</td>
+<td align="right">62</td>
+<td align="right">36</td>
+<td align="right">34</td>
+<td align="right">16</td>
+<td align="right">15</td>
+<td align="right">11</td>
+<td align="right">15.8</td>
+<td align="right">20</td>
+<td align="right">4</td>
+<td align="right">-80</td>
+<td align="right">-14.29</td>
+<td align="right">-72.22</td>
+<td align="right">-112.5</td>
+<td align="right">-36.36</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="left">M</td>
+<td align="right">46</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">9</td>
+<td align="right">8</td>
+<td align="right">54</td>
+<td align="right">30</td>
+<td align="right">17</td>
+<td align="right">4</td>
+<td align="right">17</td>
+<td align="right">7</td>
+<td align="right">11.3</td>
+<td align="right">14.8</td>
+<td align="right">2.5</td>
+<td align="right">-133.33</td>
+<td align="right">-12.5</td>
+<td align="right">-80</td>
+<td align="right">-325</td>
+<td align="right">-142.86</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="left">M</td>
+<td align="right">29</td>
+<td align="right">8</td>
+<td align="right">5</td>
+<td align="right">9</td>
+<td align="right">5</td>
+<td align="right">52</td>
+<td align="right">54</td>
+<td align="right">20</td>
+<td align="right">7</td>
+<td align="right">5</td>
+<td align="right">8</td>
+<td align="right">15.2</td>
+<td align="right">19.5</td>
+<td align="right">5</td>
+<td align="right">-60</td>
+<td align="right">-80</td>
+<td align="right">3.7</td>
+<td align="right">-185.71</td>
+<td align="right">37.5</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">43</td>
+<td align="right">8</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">5</td>
+<td align="right">78</td>
+<td align="right">nan</td>
+<td align="right">42</td>
+<td align="right">38</td>
+<td align="right">46</td>
+<td align="right">23</td>
+<td align="right">14.8</td>
+<td align="right">19.6</td>
+<td align="right">5</td>
+<td align="right">-166.67</td>
+<td align="right">-20</td>
+<td align="right">nan</td>
+<td align="right">-10.53</td>
+<td align="right">-100</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">40</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">nan</td>
+<td align="right">12</td>
+<td align="right">nan</td>
+<td align="right">2</td>
+<td align="right">nan</td>
+<td align="right">4</td>
+<td align="right">nan</td>
+<td align="right">17</td>
+<td align="right">21.5</td>
+<td align="right">4.8</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">52</td>
+<td align="right">7</td>
+<td align="right">8</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">60</td>
+<td align="right">62</td>
+<td align="right">2</td>
+<td align="right">26</td>
+<td align="right">7</td>
+<td align="right">16</td>
+<td align="right">17.6</td>
+<td align="right">18.8</td>
+<td align="right">3.9</td>
+<td align="right">12.5</td>
+<td align="right">20</td>
+<td align="right">3.23</td>
+<td align="right">92.31</td>
+<td align="right">56.25</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="left">M</td>
+<td align="right">67</td>
+<td align="right">6</td>
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="right">nan</td>
+<td align="right">62</td>
+<td align="right">nan</td>
+<td align="right">24</td>
+<td align="right">nan</td>
+<td align="right">19</td>
+<td align="right">nan</td>
+<td align="right">19</td>
+<td align="right">19.3</td>
+<td align="right">5.3</td>
+<td align="right">-50</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">57</td>
+<td align="right">7</td>
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="right">14</td>
+<td align="right">73</td>
+<td align="right">74</td>
+<td align="right">14</td>
+<td align="right">6</td>
+<td align="right">16</td>
+<td align="right">5</td>
+<td align="right">18.1</td>
+<td align="right">20</td>
+<td align="right">5.4</td>
+<td align="right">0</td>
+<td align="right">92.86</td>
+<td align="right">1.35</td>
+<td align="right">-133.33</td>
+<td align="right">-220</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">36</td>
+<td align="right">10</td>
+<td align="right">8</td>
+<td align="right">9</td>
+<td align="right">13</td>
+<td align="right">76</td>
+<td align="right">76</td>
+<td align="right">39</td>
+<td align="right">23</td>
+<td align="right">34</td>
+<td align="right">40</td>
+<td align="right">17</td>
+<td align="right">21.8</td>
+<td align="right">5.7</td>
+<td align="right">-25</td>
+<td align="right">30.77</td>
+<td align="right">0</td>
+<td align="right">-69.57</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="right">1</td>
+<td align="left">M</td>
+<td align="right">71</td>
+<td align="right">6</td>
+<td align="right">nan</td>
+<td align="right">5</td>
+<td align="right">nan</td>
+<td align="right">60</td>
+<td align="right">nan</td>
+<td align="right">39</td>
+<td align="right">nan</td>
+<td align="right">23</td>
+<td align="right">nan</td>
+<td align="right">13.9</td>
+<td align="right">21.3</td>
+<td align="right">3.9</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="right">1</td>
+<td align="left">F</td>
+<td align="right">78</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">4</td>
+<td align="right">11</td>
+<td align="right">37.8</td>
+<td align="right">31</td>
+<td align="right">30</td>
+<td align="right">35</td>
+<td align="right">21</td>
+<td align="right">14</td>
+<td align="right">18</td>
+<td align="right">21.5</td>
+<td align="right">4.7</td>
+<td align="right">0</td>
+<td align="right">63.64</td>
+<td align="right">-21.94</td>
+<td align="right">14.29</td>
+<td align="right">-50</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">57</td>
+<td align="right">8</td>
+<td align="right">3</td>
+<td align="right">11</td>
+<td align="right">5</td>
+<td align="right">64</td>
+<td align="right">36</td>
+<td align="right">27</td>
+<td align="right">7</td>
+<td align="right">19</td>
+<td align="right">12</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">-166.67</td>
+<td align="right">-120</td>
+<td align="right">-77.78</td>
+<td align="right">-285.71</td>
+<td align="right">-58.33</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">60</td>
+<td align="right">8</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">56</td>
+<td align="right">38</td>
+<td align="right">42</td>
+<td align="right">22</td>
+<td align="right">27</td>
+<td align="right">15</td>
+<td align="right">15</td>
+<td align="right">17.6</td>
+<td align="right">4.3</td>
+<td align="right">-166.67</td>
+<td align="right">-100</td>
+<td align="right">-47.37</td>
+<td align="right">-90.91</td>
+<td align="right">-80</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">67</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">64</td>
+<td align="right">0</td>
+<td align="right">24</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">14.1</td>
+<td align="right">17.3</td>
+<td align="right">3.1</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+<td align="right">nan</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">51</td>
+<td align="right">8</td>
+<td align="right">6</td>
+<td align="right">4</td>
+<td align="right">15</td>
+<td align="right">60</td>
+<td align="right">50</td>
+<td align="right">8</td>
+<td align="right">42</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">14.4</td>
+<td align="right">17.5</td>
+<td align="right">4.8</td>
+<td align="right">-33.33</td>
+<td align="right">73.33</td>
+<td align="right">-20</td>
+<td align="right">80.95</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">78</td>
+<td align="right">8</td>
+<td align="right">8</td>
+<td align="right">8</td>
+<td align="right">8</td>
+<td align="right">38</td>
+<td align="right">42</td>
+<td align="right">26</td>
+<td align="right">29</td>
+<td align="right">5</td>
+<td align="right">7</td>
+<td align="right">15.2</td>
+<td align="right">19.3</td>
+<td align="right">4.9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">9.52</td>
+<td align="right">10.34</td>
+<td align="right">28.57</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="right">2</td>
+<td align="left">M</td>
+<td align="right">75</td>
+<td align="right">8</td>
+<td align="right">2</td>
+<td align="right">11</td>
+<td align="right">4</td>
+<td align="right">49</td>
+<td align="right">40</td>
+<td align="right">11</td>
+<td align="right">8</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">12.2</td>
+<td align="right">18</td>
+<td align="right">4.7</td>
+<td align="right">-300</td>
+<td align="right">-175</td>
+<td align="right">-22.5</td>
+<td align="right">-37.5</td>
+<td align="right">-150</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">34</td>
+<td align="right">8</td>
+<td align="right">5</td>
+<td align="right">21</td>
+<td align="right">10</td>
+<td align="right">62</td>
+<td align="right">50</td>
+<td align="right">38</td>
+<td align="right">41</td>
+<td align="right">33</td>
+<td align="right">32</td>
+<td align="right">14.4</td>
+<td align="right">17.2</td>
+<td align="right">3.6</td>
+<td align="right">-60</td>
+<td align="right">-110</td>
+<td align="right">-24</td>
+<td align="right">7.32</td>
+<td align="right">-3.12</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="right">2</td>
+<td align="left">M</td>
+<td align="right">71</td>
+<td align="right">6.5</td>
+<td align="right">2</td>
+<td align="right">22</td>
+<td align="right">0</td>
+<td align="right">30</td>
+<td align="right">4</td>
+<td align="right">19</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right">2</td>
+<td align="right">12.3</td>
+<td align="right">21.4</td>
+<td align="right">5.6</td>
+<td align="right">-225</td>
+<td align="right">nan</td>
+<td align="right">-650</td>
+<td align="right">-1800</td>
+<td align="right">-350</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="right">2</td>
+<td align="left">F</td>
+<td align="right">49</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">13</td>
+<td align="right">4</td>
+<td align="right">42</td>
+<td align="right">21</td>
+<td align="right">29</td>
+<td align="right">24</td>
+<td align="right">7</td>
+<td align="right">14</td>
+<td align="right">14.8</td>
+<td align="right">18.7</td>
+<td align="right">6.2</td>
+<td align="right">-133.33</td>
+<td align="right">-225</td>
+<td align="right">-100</td>
+<td align="right">-20.83</td>
+<td align="right">50</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary-statistics">Summary Statistics<a class="headerlink" href="#summary-statistics" title="Permanent link">&para;</a></h2>
+<p>First, let us look at the summary statistics for our measured treatment effects and our engineer treatment effects.</p>
+<div class="highlight"><pre><span></span><code><span class="n">characteristics</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sex M/F&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Anterior-posterior diameter (mean ± SD in mm)&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Interpedicular distance (mean ± SD in mm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Dorsal CSF thickness (mean ± SD in mm)&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Numerical Rating Scale (mean ± SD)&#39;</span><span class="p">,</span> <span class="s1">&#39;McGill Pain Questionnaire (mean ± SD)&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Oswestry Disability Index (mean ± SD)&#39;</span><span class="p">,</span> <span class="s1">&#39;Pain Catastrophizing Scale (mean ± SD)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Index (mean ± SD&#39;</span><span class="p">]</span>
+
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;AP column Diameter (mm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Interpedicular distance (mm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Dorsal CSF Thickness (mm)&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NRS Pre-Op&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ Pre-Op&#39;</span><span class="p">,</span>  <span class="s1">&#39;ODI Pre-Op&#39;</span><span class="p">,</span>  <span class="s1">&#39;PCS Pre-Op&#39;</span><span class="p">,</span>  <span class="s1">&#39;BDI Pre-Op&#39;</span><span class="p">,</span> <span class="p">]</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">Sex</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+    <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span><span class="w"> </span><span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1"> &#39;</span> <span class="o">+</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u00B1</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()),</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">table_df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Patient Information and Clinical Characteristics&#39;</span><span class="p">:</span> <span class="n">characteristics</span><span class="p">,</span> <span class="s1">&#39;Values&#39;</span><span class="p">:</span> <span class="n">values</span><span class="p">})</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">table_df1</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Patient Information and Clinical Characteristics</th>
+<th align="left">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">Sex M/F</td>
+<td align="left">7 / 14</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">Age</td>
+<td align="left">56.0 ± 14.6</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Anterior-posterior diameter (mean ± SD in mm)</td>
+<td align="left">15.1 ± 2.1</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Interpedicular distance (mean ± SD in mm)</td>
+<td align="left">19.1 ± 1.9</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Dorsal CSF thickness (mean ± SD in mm)</td>
+<td align="left">4.5 ± 1.0</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="left">Numerical Rating Scale (mean ± SD)</td>
+<td align="left">7.3 ± 1.7</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="left">McGill Pain Questionnaire (mean ± SD)</td>
+<td align="left">7.9 ± 5.5</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="left">Oswestry Disability Index (mean ± SD)</td>
+<td align="left">55.2 ± 16.0</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="left">Pain Catastrophizing Scale (mean ± SD)</td>
+<td align="left">23.9 ± 12.6</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="left">Beck Depression Index (mean ± SD</td>
+<td align="left">16.0 ± 11.7</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="n">characteristics</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Numerical Rating Scale Percent Change (mean ± SD)&#39;</span><span class="p">,</span> <span class="s1">&#39;McGill Pain Questionnaire Percent Change (mean ± SD)&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Oswestry Disability Index Percent Change (mean ± SD)&#39;</span><span class="p">,</span> <span class="s1">&#39;Pain Catastrophizing Scale Percent Change (mean ± SD)&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Beck Depression Index Percent Change (mean ± SD&#39;</span><span class="p">]</span>
+
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NRS_pct_change&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ_pct_change&#39;</span><span class="p">,</span> <span class="s1">&#39;ODI_pct_change&#39;</span><span class="p">,</span> <span class="s1">&#39;PCS_pct_change&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI_pct_change&#39;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+    <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span><span class="w"> </span><span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1"> &#39;</span> <span class="o">+</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u00B1</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39; </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()),</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">table_df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Patient Information and Clinical Characteristics&#39;</span><span class="p">:</span> <span class="n">characteristics</span><span class="p">,</span> <span class="s1">&#39;Values&#39;</span><span class="p">:</span> <span class="n">values</span><span class="p">})</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">table_df2</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="left">Patient Information and Clinical Characteristics</th>
+<th align="left">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">0</td>
+<td align="left">Numerical Rating Scale Percent Change (mean ± SD)</td>
+<td align="left">-95.1 ± 87.5</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="left">McGill Pain Questionnaire Percent Change (mean ± SD)</td>
+<td align="left">-36.0 ± 90.8</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="left">Oswestry Disability Index Percent Change (mean ± SD)</td>
+<td align="left">-72.0 ± 158.0</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="left">Pain Catastrophizing Scale Percent Change (mean ± SD)</td>
+<td align="left">-174.5 ± 434.1</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="left">Beck Depression Index Percent Change (mean ± SD</td>
+<td align="left">-59.0 ± 113.6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statistical-testing">Statistical Testing<a class="headerlink" href="#statistical-testing" title="Permanent link">&para;</a></h2>
+<p>We're interested in comparing the treatment effects pre and post subject's operations. To begin with, we can use the Shapiro-Wilk Test to determine if the differences between each set of distributions are potentially normally distributed.
+(h1)=
+The null hypothesis is that the difference between the distributions of each treatment effect pre and post operation are not normally distributed. If we reject the null hypothesis, then we will proceed assuming the difference in distributions is not normally distributed. If we fail to reject the null hypothesis, then we will assume the distributions could be normally distributed.</p>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># Adjust the figure size as needed</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="n">delta_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NRS&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ&#39;</span><span class="p">,</span> <span class="s1">&#39;ODI&#39;</span><span class="p">,</span> <span class="s1">&#39;PCS&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">delta_cols</span><span class="p">)):</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">delta_cols</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> Post-Op&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">delta_cols</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> Pre-Op&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">shapiro</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shapiro-Wilk Test: </span><span class="si">{</span><span class="n">delta_cols</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">Statistic: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">stat</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">P-value: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span>  <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sample </span><span class="si">{</span><span class="n">delta_cols</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> could be normally distributed (fail to reject null hypothesis)&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sample </span><span class="si">{</span><span class="n">delta_cols</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> does not look normally distributed (reject null hypothesis)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;********************** </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">stats</span><span class="o">.</span><span class="n">probplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Normal Q-Q Plot </span><span class="si">{</span><span class="n">delta_cols</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mf">0.24</span><span class="p">,</span><span class="mf">0.125</span><span class="p">,</span><span class="mf">0.228</span><span class="p">,</span><span class="mf">0.343</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="mf">0.55</span><span class="p">,</span><span class="mf">0.125</span><span class="p">,</span><span class="mf">0.228</span><span class="p">,</span><span class="mf">0.343</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/Non-Opioid_Treatment_Analysis/figure1.png&#39;</span><span class="p">)</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;img/Non-Opioid_Treatment_Analysis/figure1.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Shapiro-Wilk Test: NRS
+Statistic: 0.958
+P-value: 0.513
+Sample NRS could be normally distributed (fail to reject null hypothesis)
+**********************
+
+Shapiro-Wilk Test: MPQ
+Statistic: 0.957
+P-value: 0.55
+Sample MPQ could be normally distributed (fail to reject null hypothesis)
+**********************
+
+Shapiro-Wilk Test: ODI
+Statistic: 0.862
+P-value: 0.016
+Sample ODI does not look normally distributed (reject null hypothesis)
+**********************
+
+Shapiro-Wilk Test: PCS
+Statistic: 0.881
+P-value: 0.027
+Sample PCS does not look normally distributed (reject null hypothesis)
+**********************
+
+Shapiro-Wilk Test: BDI
+Statistic: 0.96
+P-value: 0.607
+Sample BDI could be normally distributed (fail to reject null hypothesis)
+**********************
+</code></pre>
+<p><img alt="png" src="output_12_1.png" /></p>
+<p>For three of the subjects' measured treatment effects, Numerical Rating Scale (NRS), McGill Pain Questionnairre (MPQ), and Beck Depression Index (BDI), we fail to reject the <a href="#h1">null hypothesis</a> and so the differences between effects pre and post operation could be normally distributed. For these three we will test if the underlying distributions of the treatment effects pre and post operation have the same underlying distribution using the Student's t-test.</p>
+<p>For the other two measured treatment effects, Oswestry Disability Index (ODI) and Pain Catastrophizing Scale (PCS), we reject the null hypthesis and assume the difference between treatment effects pre and post operation are not normally distributed. For these two treatment effects we cannot use the Student's t-test, and will instead use the non-parametric Mann Whitney U Test to test whether the the pre and post operation treatment effect samples hace the same underlying distribution. Because the Mann Whitney U Test is a non-parametric statistical test that does not assume normality, we will also use this test on the other three treatment effects.</p>
+<h3 id="students-t-test">Student's T-Test<a class="headerlink" href="#students-t-test" title="Permanent link">&para;</a></h3>
+<p>The Two-Sample, Paired Student's T-Test is used to test whether two related, sample distributions have a statistically significant difference.</p>
+<p>(h2)=
+Our null hypothesis is that the averages (or expected) values of the two samples, pre and post treatment effects, are the same.</p>
+<p>If the null hypothesis is rejected, then the pre and post operation treatment effect samples do not have identical average (expected) values and the pre and post operation samples could be different, or in other words, the operation may have influenced a change in the measured treatment effect.</p>
+<p>If we fail to reject the null hypothesis, then the pre and post operation treatment effect samples could have identical average (expected) values and the operation may not have influenced a change in the measured treatment effect.</p>
+<div class="highlight"><pre><span></span><code><span class="n">delta_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NRS&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">delta_cols</span><span class="p">:</span>
+    <span class="n">resultTtest</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_rel</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Pre-Op&#39;</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Post-Op&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student&#39;s t Test: </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">Statistic: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">resultTtest</span><span class="o">.</span><span class="n">statistic</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">P-value: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">resultTtest</span><span class="o">.</span><span class="n">pvalue</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">resultTtest</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&gt;</span>  <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Pre and Post Op </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> samples could have identical average (expected) values. (fail to reject null hypothesis)&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Pre and Post Op </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> samples do not have identical average (expected) values. (reject null hypothesis)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;********************** </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Student's t Test: NRS
+Statistic: 6.139
+P-value: 0.0
+Pre and Post Op NRS samples do not have identical average (expected) values. (reject null hypothesis)
+**********************
+
+Student's t Test: MPQ
+Statistic: 0.961
+P-value: 0.35
+Pre and Post Op MPQ samples could have identical average (expected) values. (fail to reject null hypothesis)
+**********************
+
+Student's t Test: BDI
+Statistic: 1.916
+P-value: 0.072
+Pre and Post Op BDI samples could have identical average (expected) values. (fail to reject null hypothesis)
+**********************
+</code></pre>
+<p>We only reject the <a href="#h2">null hypothesis</a> for the first treatment effect, Numerical Rating Scale (NRS), and fail to reject the <a href="#h2">null hypothesis</a> for the other two treatment effects McGill Pain Questionnairre (MPQ) and Beck Depression Index (BDI).</p>
+<h3 id="wilcoxon-signed-rank-test">Wilcoxon Signed-Rank Test<a class="headerlink" href="#wilcoxon-signed-rank-test" title="Permanent link">&para;</a></h3>
+<p>The Wilcoxon Signed-Rank Test is a non-parametric version of the Student's T-Test used to test if there is a difference between two paired distributions.
+(h3)=
+It tests the null hypothesis that differences between the paired samples are distributed symetrically around zero.
+If we reject the null hypothesis, then the paired pre and post operation treatment effects do not have the same underlying distribution, and the operation could have caused a significant difference to the measured treatment effect. And if we fail to reject the null hypothesis, then the paired treatment effect samples could have the same underlying distribution, and the treatment may not have caused a significant difference to the measured treatment effect.</p>
+<div class="highlight"><pre><span></span><code><span class="n">delta_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NRS&#39;</span><span class="p">,</span> <span class="s1">&#39;MPQ&#39;</span><span class="p">,</span> <span class="s1">&#39;ODI&#39;</span><span class="p">,</span> <span class="s1">&#39;PCS&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">delta_cols</span><span class="p">:</span>
+    <span class="n">result_wilcoxon_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">wilcoxon</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Pre-Op&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> Post-Op&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">,</span> <span class="n">zero_method</span><span class="o">=</span><span class="s1">&#39;wilcox&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wilcoxon Signed-Rank Test: </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">Statistic: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">result_wilcoxon_test</span><span class="o">.</span><span class="n">statistic</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">P-value: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">result_wilcoxon_test</span><span class="o">.</span><span class="n">pvalue</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result_wilcoxon_test</span><span class="o">.</span><span class="n">pvalue</span> <span class="o">&gt;</span>  <span class="mf">0.05</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Pre and Post Op </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> samples could have the same underlying distribution. (fail to reject null hypothesis)&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Pre and Post Op </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1"> samples do not have the same underlying distribution. (reject null hypothesis)&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;********************** </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Wilcoxon Signed-Rank Test: NRS
+Statistic: 1.0
+P-value: 0.0
+Pre and Post Op NRS samples do not have the same underlying distribution. (reject null hypothesis)
+**********************
+
+Wilcoxon Signed-Rank Test: MPQ
+Statistic: 48.0
+P-value: 0.3
+Pre and Post Op MPQ samples could have the same underlying distribution. (fail to reject null hypothesis)
+**********************
+
+Wilcoxon Signed-Rank Test: ODI
+Statistic: 10.0
+P-value: 0.003
+Pre and Post Op ODI samples do not have the same underlying distribution. (reject null hypothesis)
+**********************
+
+Wilcoxon Signed-Rank Test: PCS
+Statistic: 44.0
+P-value: 0.074
+Pre and Post Op PCS samples could have the same underlying distribution. (fail to reject null hypothesis)
+**********************
+
+Wilcoxon Signed-Rank Test: BDI
+Statistic: 45.5
+P-value: 0.09
+Pre and Post Op BDI samples could have the same underlying distribution. (fail to reject null hypothesis)
+**********************
+</code></pre>
+<p>Like with the Student's T-Test, we reject the <a href="#h3">null hypothesis</a> for treatment effect Numerical Rating Scale (NRS), we also reject the <a href="#h3">null hypothesis</a> for the treatment effect Oswestry Disability Index (ODI). This suggests that there is a statistically significant difference between these measured treatment effects from before and after the subjects' operations.</p>
+<p>For the other three treatment effects, we fail to reject the <a href="#h3">null hypothesis</a>, and should conclude that there is no significant differences to the measured treatment effects before and after the subjects' operations.</p>
+<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
+<p><a href="#H1">We found large, average percent descreases between pre and post operation data across all five measured treatment effects for subject's reported pain, depression, and pain induced disability.</a>Using both parametric and non-parametric statistical testing we found there was a statistically significant difference to the subject's pain and disability as reported with the Numerical Rating Scale for pain and the Oswestry Disability Index for lower-back pain induced disability.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Opioid_Prevalence_And_Overdoses/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Opioid Prevalence And Overdoses" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Opioid Prevalence And Overdoses
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Monitoring_The_Future_12th_Grader_Opiate_Use_In_2019/" class="md-footer__link md-footer__link--next" aria-label="Next: MTF 12th Grader Opiate Use In 2019" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              MTF 12th Grader Opiate Use In 2019
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.indexes", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+    
+  </body>
+</html>
