@@ -216,7 +216,7 @@ jobs:
           # Setup helm
           - name: Set Up Helm
             if: ${{ env.SKIP_TESTS != 'true' && env.GEN3_INSTANCE_TYPE == 'HELM_LOCAL' }}
-            uses: azure/setup-helm@v4.3.0
+            uses: azure/setup-helm@v4.3.1
             with:
               version: latest
 
