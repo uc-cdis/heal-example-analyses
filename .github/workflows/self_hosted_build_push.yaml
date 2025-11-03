@@ -79,7 +79,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
         with:
           driver: kubernetes
           driver-opts: namespace=self-hosted-runners,"nodeselector=kubernetes.io/arch=amd64,node.kubernetes.io/instance-type=t3.2xlarge",requests.cpu=6,requests.memory=25G,"tolerations=key=role,value=armrunners,effect=NoSchedule"
