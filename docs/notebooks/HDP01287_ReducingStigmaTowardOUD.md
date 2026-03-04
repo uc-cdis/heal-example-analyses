@@ -1,20 +1,16 @@
-# Stigma Reduction among Primary Care Clinicians towards People with OUD - A Study and Research Validation Analysis
+# Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians
 
 #### By J M Maxwell - Data Science, Sr. Analyst - CTDS
 
+In this notebook, we utilize data from the study “Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians” to recreate a number of the images and figures as seen in the paper by Hooker et al. titled _A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians_ ([PMID: 36774521](https://pubmed.ncbi.nlm.nih.gov/36774521/)). The data for this study are archived in NIDA Data Share.
+
+The purpose of this notebook is to demonstrate how data accessed through the HEAL Data Platform can be analyzed in a HEAL workspace. Due to possible minor differences in selection/filtering of observations and handling of missing data, the tables and figures in this notebook may slightly vary from the results published in the paper.
+
+The work here was conducted without direct involvement by Hooker et al., and does not represent study conclusions or recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
+
 ## Introduction
 
-In this notebook, we’ll be replicating the published analyses by Hooker et al. in A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians ([PMC9922036](https://pmc.ncbi.nlm.nih.gov/articles/PMC9922036/)), in order to demonstrate how users might use these data. These data are available from NIDA Data Share through the HEAL Data Platform.
-
-There is an ongoing, dramatic rise in the number of opioid related overdose deaths in the United States, however only a small portion of patients who are diagnosed with Opioid Use Disorders (OUD) seek treatment and recieve medications for OUD (MOUD). MOUDs, like buprenorphine, can be effective forms of treatment for OUD patients, but only a portion of clinicians are waivered to, and in actuality do, prescribe buprenophine. A potential barrier to care for OUD patients may be the stigma held by primary care clinicians (PCCs) towards people with OUD. There are a limited number of interventions available for reducing OUD stigma among PCCs and a need for analytical support for the efficacy of these interventions. *A randomized controlled trial of an intervention...* examines whether PCCs' stigma towards people with OUD may be reduced and PCCs' intentions to treat OUD patients increased through online training interventions.
-
-This work was done exclusively to demonstrate the advantages of the HEAL Platform's Workspace feature and the ability to utilize data that is joined under the HEAL data mesh. While all the work here was completed by J M. Maxwell and members of the HEAL Platform team, this is not original work, and it is exclusively based off of the work completed by Hooker et al.
-
-The work here does not represent the official opinions, recommendations, or conclusions of Hooker et al. and this work does not represent policy or medical recommendations on behalf of the authors, the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
-
-
-
-    Hooker, Stephanie A et al. “A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians.” Addiction science & clinical practice vol. 18,1 10. 11 Feb. 2023, doi:10.1186/s13722-023-00366-1
+There is an ongoing, dramatic rise in the number of opioid related overdose deaths in the United States, however only a small portion of patients who are diagnosed with Opioid Use Disorders (OUD) seek treatment and recieve medications for OUD (MOUD). MOUDs, like buprenorphine, can be effective forms of treatment for OUD patients, but only a portion of clinicians are waivered to, and in actuality do, prescribe buprenophine. A potential barrier to care for OUD patients may be the stigma held by primary care clinicians (PCCs) towards people with OUD. There are a limited number of interventions available for reducing OUD stigma among PCCs and a need for analytical support for the efficacy of these interventions. This study examines whether PCCs' stigma towards people with OUD may be reduced and PCCs' intentions to treat OUD patients increased through online training interventions.
 
 #### Import Python Libraries
 
@@ -289,12 +285,19 @@ The study demonstrated there was little relation between the provided stigma red
 
 Since greater established PCC stigma is shown to inversely relate to PCCs' willingness to treat people with OUD, intentions to prescribe buprenophine, and perceptions regarding treatment effectiveness and patient adherence to treatment, it is important to find more effective intervention methods for reducing stigma.
 
-### Citations
+## References
 
-    Hooker, Stephanie A et al. “A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians.” Addiction science & clinical practice vol. 18,1 10. 11 Feb. 2023, doi:10.1186/s13722-023-00366-1
+#### Paper
 
-    Hooker, S., Rossum, R., Crain, L., Bart, G. "Reducing Stigma toward People with Opioid Use Disorder among Primary Care Clinicians." NIDA Data Share. May 2024, NIDA-CTN-0095A2
+Hooker, Stephanie A et al. “A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians.” Addiction science & clinical practice vol. 18,1 10. 11 Feb. 2023, doi:10.1186/s13722-023-00366-1
 
+#### Study
+
+Hooker, S., Rossum, R., Crain, L., Bart, G. "Reducing Stigma toward People with Opioid Use Disorder among Primary Care Clinicians." NIDA Data Share. May 2024, NIDA-CTN-0095A2
+
+#### HEAL Data Platform
+
+Hooker, Stephanie A.& Bart, Gavin & Rossom, Rebecca  (2025). Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians 2. HEAL Data Platform. Study Record. 10.60490/HDP01287
 
 
 ```python
