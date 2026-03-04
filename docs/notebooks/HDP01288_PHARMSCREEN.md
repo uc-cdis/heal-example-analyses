@@ -2,11 +2,11 @@
 
 #### J M Maxwell - Data Science, Sr. Analyst - CTDS
 
-In this notebook, we utilize data from the study “Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians” to recreate a number of the images and figures as seen in the paper by Hooker et al. titled _A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians_ [(PMID: 34610516)](https://pubmed.ncbi.nlm.nih.gov/34610516/). The data for this study are archived in NIDA Data Share.
+In this notebook, we utilize data from the study “Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool (PHARMSCREEN)” to recreate a number of the images and figures as seen in the paper by Cochran et al. titled _Validation and Threshold Identification of a Prescription Drug Monitoring Program Clinical Opioid Risk Metric with the WHO Alcohol, Smoking, and Substance Involvement Screening Test_ ([PMID: 34610516](https://pubmed.ncbi.nlm.nih.gov/34610516/)). The data for this study are archived in NIDA Data Share.
 
 The purpose of this notebook is to demonstrate how data accessed through the HEAL Data Platform can be analyzed in a HEAL workspace. Due to possible minor differences in selection/filtering of observations and handling of missing data, the tables and figures in this notebook may slightly vary from the results published in the paper.
 
-The work here was conducted without direct involvement by Hooker et al., and does not represent study conclusions or recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
+The work here was conducted without direct involvement by Cochran et al., and does not represent study conclusions or recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
 
 
 ## Access Data
