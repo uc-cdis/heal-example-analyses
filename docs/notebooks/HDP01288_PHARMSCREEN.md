@@ -1,6 +1,6 @@
-# Opioid Risk Metric Threshold Identification - Study Recreation
+# Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool (PHARMSCREEN)
 
-#### - J M. Maxwell
+#### J M Maxwell - Data Science, Sr. Analyst - CTDS
 
 In this notebook we will be recreating the work by Cochran et al. from the paper *Validation and Threshold Identification of a Prescription Drug Monitoring Program Clinical Opioid Risk Metric with the WHO Alcohol, Smoking, and Substance Involvement Screening Test*. We will be utilizing data from the study *Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool* to recreate a number of the images and graphs as seen in the paper.
 
