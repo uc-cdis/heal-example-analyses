@@ -2,12 +2,11 @@
 
 #### J M Maxwell - Data Science, Sr. Analyst - CTDS
 
-In this notebook we will be recreating the work by Cochran et al. from the paper *Validation and Threshold Identification of a Prescription Drug Monitoring Program Clinical Opioid Risk Metric with the WHO Alcohol, Smoking, and Substance Involvement Screening Test*. We will be utilizing data from the study *Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool* to recreate a number of the images and graphs as seen in the paper.
+In this notebook, we utilize data from the study “Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians” to recreate a number of the images and figures as seen in the paper by Hooker et al. titled _A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians_ ([PMID: 36774521](https://pubmed.ncbi.nlm.nih.gov/36774521/)). The data for this study are archived in NIDA Data Share.
 
-This work was strictly done to demonstrate the advantages of the HEAL Platform's Workspace feature and the ability to utilize data that is joined under the HEAL data mesh. While all the work here was completed by J M. Maxwell and members of the HEAL Platform team, this is not original work, and it is exclusively based off of the work completed by Cochran et al. Due to compounding factors relating to variations in data cleaning methodologies, the work presented here will slightly vary from the results published in *Validation and Threshold Identification...* by Cochran et al.
+The purpose of this notebook is to demonstrate how data accessed through the HEAL Data Platform can be analyzed in a HEAL workspace. Due to possible minor differences in selection/filtering of observations and handling of missing data, the tables and figures in this notebook may slightly vary from the results published in the paper.
 
-The work here does not represent the official opinions, recommendations, or conclusions of Cochran et al. and this work does not represent policy or medical recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
-
+The work here was conducted without direct involvement by Hooker et al., and does not represent study conclusions or recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
 
 ## Access Data
 
