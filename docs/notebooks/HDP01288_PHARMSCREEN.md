@@ -2,7 +2,7 @@
 
 #### J M Maxwell - Data Science, Sr. Analyst - CTDS
 
-In this notebook, we utilize data from the study “Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians” to recreate a number of the images and figures as seen in the paper by Hooker et al. titled _A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians_ ([PMID: 36774521](https://pubmed.ncbi.nlm.nih.gov/36774521/)). The data for this study are archived in NIDA Data Share.
+In this notebook, we utilize data from the study “Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians” to recreate a number of the images and figures as seen in the paper by Hooker et al. titled _A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians_ [(PMID: 34610516)](https://pubmed.ncbi.nlm.nih.gov/34610516/). The data for this study are archived in NIDA Data Share.
 
 The purpose of this notebook is to demonstrate how data accessed through the HEAL Data Platform can be analyzed in a HEAL workspace. Due to possible minor differences in selection/filtering of observations and handling of missing data, the tables and figures in this notebook may slightly vary from the results published in the paper.
 
@@ -46,7 +46,7 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from sklearn import metrics
-from zipfile import ZipFile
+import zipfile
 from IPython.display import Markdown, Image, display
 os.makedirs('img/Opioid_Risk_Metric_Threshold_Identification')
 ```
@@ -57,8 +57,8 @@ Read in the data and filter by the relevant data fields: Unique Identifier, Narc
 
 
 ```python
-with ZipFile('CTN0093_csv.zip', 'r') as zip_object:
-    zip_object.extractall()
+with zipfile.ZipFile('CTN0093_csv.zip', 'r') as zip_ref:
+    zip_ref.extractall('.')
 
 df = pd.read_csv('CTN0093_FINAL_DATASET.csv')
 cols = [x for x in df.columns if 'RX_OPIOID' in x]
@@ -229,16 +229,15 @@ According to the paper, false positive misclassification is greatest among subje
 
 The study from Cochran et al. explains how the NS metric can be used as a universal screening tool for prescription opioid misuse risk by clinicians and pharmacists at the community level. In particular, the NS metric offers an easy-to-use format for identifying risky subject profiles with minimal effort required from either the subject or the pharmacist, and utilization of the NS metric is well positioned to inform decision-making by pharmacists and to compliment existing surveys for assessing subjects' risks of prescription opioid misuse.
 
-## References
+# References
 
 #### Paper
-
-Hooker, Stephanie A et al. “A randomized controlled trial of an intervention to reduce stigma toward people with opioid use disorder among primary care clinicians.” Addiction science & clinical practice vol. 18,1 10. 11 Feb. 2023, doi:10.1186/s13722-023-00366-1
+Cochran G, Brown J, Yu Z, Frede S, Bryan MA, Ferguson A, Bayyari N, Taylor B, Snyder ME, Charron E, Adeoye-Olatunde OA, Ghitza UE, Winhusen T. Validation and threshold identification of a prescription drug monitoring program clinical opioid risk metric with the WHO alcohol, smoking, and substance involvement screening test. Drug Alcohol Depend. 2021 Nov 1;228:109067. doi: 10.1016/j.drugalcdep.2021.109067. Epub 2021 Sep 24. PMID: 34610516; PMCID: PMC8612015.
 
 #### Study
 
-Hooker, S., Rossum, R., Crain, L., Bart, G. "Reducing Stigma toward People with Opioid Use Disorder among Primary Care Clinicians." NIDA Data Share. May 2024, NIDA-CTN-0095A2
+Cochran G, Winhusen T. Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool. NIDA-CTN-0093. https://datashare.nida.nih.gov/study/nida-ctn-0093
 
-#### HEAL Data Platform
+#### HEAL Data Platform:
 
-Hooker, Stephanie A.& Bart, Gavin & Rossom, Rebecca  (2025). Reducing Stigma Toward People with Opioid Use Disorder Among Primary Care Clinicians 2. HEAL Data Platform. Study Record. 10.60490/HDP01287
+Cochran, Gerald & Winhusen, T. John (2025). Validation of a Community Pharmacy-based Prescription Drug Monitoring Program Risk Screening Tool (PHARMSCREEN) 2. HEAL Data Platform. Study Record. 10.60490/HDP01288
