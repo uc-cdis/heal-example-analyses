@@ -1,12 +1,12 @@
-# Opioid Risk Metric Threshold Identification - Study Recreation
+# Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool (PHARMSCREEN)
 
-#### - J M. Maxwell
+#### J M Maxwell - Data Science, Sr. Analyst - CTDS
 
-In this notebook we will be recreating the work by Cochran et al. from the paper *Validation and Threshold Identification of a Prescription Drug Monitoring Program Clinical Opioid Risk Metric with the WHO Alcohol, Smoking, and Substance Involvement Screening Test*. We will be utilizing data from the study *Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool* to recreate a number of the images and graphs as seen in the paper.
+In this notebook, we utilize data from the study “Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool (PHARMSCREEN)” to recreate a number of the images and figures as seen in the paper by Cochran et al. titled _Validation and Threshold Identification of a Prescription Drug Monitoring Program Clinical Opioid Risk Metric with the WHO Alcohol, Smoking, and Substance Involvement Screening Test_ ([PMID: 34610516](https://pubmed.ncbi.nlm.nih.gov/34610516/)). The data for this study are archived in NIDA Data Share.
 
-This work was strictly done to demonstrate the advantages of the HEAL Platform's Workspace feature and the ability to utilize data that is joined under the HEAL data mesh. While all the work here was completed by J M. Maxwell and members of the HEAL Platform team, this is not original work, and it is exclusively based off of the work completed by Cochran et al. Due to compounding factors relating to variations in data cleaning methodologies, the work presented here will slightly vary from the results published in *Validation and Threshold Identification...* by Cochran et al.
+The purpose of this notebook is to demonstrate how data accessed through the HEAL Data Platform can be analyzed in a HEAL workspace. Due to possible minor differences in selection/filtering of observations and handling of missing data, the tables and figures in this notebook may slightly vary from the results published in the paper.
 
-The work here does not represent the official opinions, recommendations, or conclusions of Cochran et al. and this work does not represent policy or medical recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
+The work here was conducted without direct involvement by Cochran et al., and does not represent study conclusions or recommendations on behalf of the NIH HEAL Initiative, The Center For Translational Data Science, or The University of Chicago.
 
 
 ## Access Data
@@ -46,7 +46,7 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from sklearn import metrics
-from zipfile import ZipFile
+import zipfile
 from IPython.display import Markdown, Image, display
 os.makedirs('img/Opioid_Risk_Metric_Threshold_Identification')
 ```
@@ -57,8 +57,8 @@ Read in the data and filter by the relevant data fields: Unique Identifier, Narc
 
 
 ```python
-with ZipFile('CTN0093_csv.zip', 'r') as zip_object:
-    zip_object.extractall()
+with zipfile.ZipFile('CTN0093_csv.zip', 'r') as zip_ref:
+    zip_ref.extractall('.')
 
 df = pd.read_csv('CTN0093_FINAL_DATASET.csv')
 cols = [x for x in df.columns if 'RX_OPIOID' in x]
@@ -237,3 +237,7 @@ Cochran G, Brown J, Yu Z, Frede S, Bryan MA, Ferguson A, Bayyari N, Taylor B, Sn
 #### Study
 
 Cochran G, Winhusen T. Validation of a Community Pharmacy-Based Prescription Drug Monitoring Program Risk Screening Tool. NIDA-CTN-0093. https://datashare.nida.nih.gov/study/nida-ctn-0093
+
+#### HEAL Data Platform:
+
+Cochran, Gerald & Winhusen, T. John (2025). Validation of a Community Pharmacy-based Prescription Drug Monitoring Program Risk Screening Tool (PHARMSCREEN) 2. HEAL Data Platform. Study Record. 10.60490/HDP01288
